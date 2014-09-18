@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('../scss/site-settings/font/icons/fontello.eot?71791683');
+  src: url('../scss/site-settings/font/icons/fontello.woff?71791683') format('woff'),
+       url('../scss/site-settings/font/icons/fontello.ttf?71791683') format('truetype'),
+       url('../scss/site-settings/font/icons/fontello.svg?71791683#fontello') format('svg');
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before,
+[class^="icon-"]:after, [class*=" icon-"]:after {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: $in-block;
+  text-decoration: none;
+  width: 1rem;
+  margin-right: .2rem;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1rem;  // fix buttons height, for twitter bootstrap
+  font-size: inherit;
+}
+
+// Classes for icons
+.icon-minus:after       { content: '\e800'; }
+.icon-plus:after        { content: '\e801'; }
+.icon-twitter:before    { content: '\e802'; }
+.icon-attention:before  { content: '\e803'; }
+.icon-spin:before       { content: '\e804'; }
+.icon-facebook:before   { content: '\e805'; }
+.icon-right-sml:after   { content: '\e806'; }
+.icon-left-sml:after    { content: '\e807'; }
+
+// animate the spinner
+@keyframes rotate-spinner {
+  0% {
+    @include rotate(0);
+  }
+  100% {
+    @include rotate(360);
+  }
+}
+
+.animate-spin {
+  @include animation('rotate-spinner 1.5s infinite linear');
+  &:before,
+  &:after {
+    margin-left: .2rem; // fixes animation for centering
+  }
+}

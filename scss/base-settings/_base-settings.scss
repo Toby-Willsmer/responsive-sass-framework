@@ -1,0 +1,44 @@
+$base-font-size:        16; // vertical rhythm
+$base-line-height:      24; // vertical rhythm
+
+$full-width:            100%;
+$full-height:           $full-width;
+$left:                  left;
+$right:                 right;
+
+// ------ spacing for padding / margin ------ //
+$zero: 0;
+
+%zero-all {
+  padding:  $zero;
+  margin:   $zero;
+}
+
+$in-block:              inline-block;
+$block:                 block;
+
+$space-xxsml:           remCalc(3);
+$space-xsml:            remCalc(6);
+$space-sml:             remCalc(12);
+$space-med:             remCalc(16);
+$space-medl:            remCalc(18);
+$space-lrg:             remCalc(24);
+$space-xlrg:            remCalc(30);
+
+// ------ Radius ------ //
+$radius:                remCalc(6);
+$rounded:               remCalc(1000);
+
+// ------ Breakpoints for inline control ------ //
+$xsmall:                320px;
+$xsmall-landscape:      480px;
+$small:                 640px; // grid setting
+$small-landscape:       756px;
+$medium:                960px;
+$medium-landscape:      1024px; // grid setting
+$large:                 1280px;
+$large-landscape:       1440px; // grid setting
+
+.clearfix {
+  @include clearfix;
+}

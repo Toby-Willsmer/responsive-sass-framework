@@ -1,0 +1,22 @@
+// content in header
+header {
+  width: $full-width;
+  background: #ccc;
+}
+
+.logo {
+  float: left;
+}
+
+// main top menu
+.main-nav {
+  float: right;
+  margin-bottom: 0;
+  li {
+    float: left;
+    a {
+      display: $in-block;
+      padding: $space-sml;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+button, .button {
+  display: $in-block;
+  width: $full-width;
+  border-radius: $radius/2; // 6/2 = 3px
+  border-width: 1px;
+  border-style: solid;
+  padding: $space-sml $space-xlrg; // 12 - 30
+  @include font-rhythm(14, no, 1);
+  color: $white;
+  text-align: center;
+  background: $grey-lighter;
+  @include transition(all 0.3s ease);
+  @include respond-to ($xsmall-landscape) {
+    width: auto;
+  }
+  @include respond-to ($small) {
+    padding: $space-xsml $space-xlrg; // 6 - 30
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+  }
+  &.btn-small {
+    @include font-rhythm(12, no, 1);
+    padding: $space-xsml $space-xsml; // 6 - 12
+  }
+  &.btn-large {
+    @include font-rhythm(16, no, 1);
+    padding: $space-sml $space-xlrg; // 12 - 38
+  }
+  &[disabled] {
+    color: $grey-darker;
+    cursor: default;
+  }
+  &.btn-text {
+    border: none;
+    background: none;
+    color: $blue;
+    padding: 0 $space-xsml; // 0 - 12
+  }
+}
+
+// blue button
+.btn-blue {
+  @include bg-gradient($blue, $blue-darker, true);
+  border-color: $blue-dark;
+  &:hover,
+  &:focus {
+    border-color: $blue-darker;
+  }
+}
+
+// green button
+.btn-green {
+  @include bg-gradient($green, $green-darker, true);
+  border-color: $green-dark;
+  &:hover,
+  &:focus {
+    border-color: $green-darker;
+  }
+}
+
+// red button
+.btn-red {
+  @include bg-gradient($red, $red-darker, true);
+  border-color: $red-dark;
+  &:hover,
+  &:focus {
+    border-color: $red-darker;
+  }
+}
+
+// grey button hover state
+.btn-grey {
+  color: $grey-darker;
+  &:hover,
+  &:focus {
+    color: $white;
+    background: $grey-dark;
+  }
+}
+
+[disabled],
+.btn-grey {
+  border-color: $grey-dark;
+}

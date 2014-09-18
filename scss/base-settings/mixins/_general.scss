@@ -1,0 +1,54 @@
+// ------ Global ------ //
+@mixin clearfix() {
+  *zoom:1;
+  &:before, &:after {
+      content: " ";
+      display: block;
+  }
+  &:after {
+      clear: both;
+  }
+}
+
+// ------ hover, active ,focus ------ //
+@mixin hoverActiveFocus($property, $value) {
+  &:hover, &:active, &:focus {
+    #{$property}: $value;
+  }
+}
+
+// ------ Gradients ------ //
+@mixin bg-gradient($colour1, $colour2, $focus: false) {
+  background-color: $colour1; // Fallback Color
+  background-image: -webkit-linear-gradient(top, $colour1, $colour2); // Chrome 10+, Saf5.1+, iOS 5+
+  background-image: -moz-linear-gradient(top, $colour1, $colour2);
+  background-image:  linear-gradient(top, $colour1, $colour2);
+  @if $focus == true {
+    &:hover,
+    &:focus {
+      background-color: darken($colour1, 10%); // Fallback Color
+      background-image: -webkit-linear-gradient(top, darken($colour1, 10%), darken($colour2, 10%)); // Chrome 10+, Saf5.1+, iOS 5+
+      background-image: -moz-linear-gradient(top, darken($colour1, 10%), darken($colour2, 10%));
+      background-image: linear-gradient(top, darken($colour1, 10%), darken($colour2, 10%));
+    }
+  }
+}
+
+// ------ Transition ------ //
+@mixin transition($transition) {
+  transition: $transition;
+}
+
+// ------ Transform ------ //
+@mixin transform($property) {
+  transform: $property;
+}
+
+// ------ Animation ------ //
+@mixin animation($string) {
+  animation: #{$string};  
+}
+
+@mixin rotate($value) {
+  transform: rotate(#{$value}deg);
+}

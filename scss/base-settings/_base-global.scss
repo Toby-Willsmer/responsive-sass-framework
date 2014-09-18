@@ -1,0 +1,59 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box; 
+}
+
+html {
+  font-family: arial;
+}
+
+html, body {
+  height: 100%;
+  font-size: 100%;
+  overflow-x: hidden; // used for the off canvas to hide the overflow
+}
+
+body {
+  background: #fff;
+  color: #333;
+  position: relative;
+}
+
+// get images and embeds to work properly
+img,
+object,
+embed { max-width: 100%; height: auto; }
+
+object,
+embed { height: 100%; }
+img { -ms-interpolation-mode: bicubic; }
+
+#map_canvas,
+.map_canvas {
+  img,
+  embed,
+  object { max-width: none !important;
+  }
+}
+
+// Get rid of gap under images
+img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+// conditional IE message
+.not-supported {
+  width: 100%;
+  padding: 20px;
+  color: #000;
+  margin-bottom: 20px;
+  text-align: center;
+  background: #ffecb3;
+  border-top: solid 1px #664d00;
+  border-bottom: solid 1px #664d00;
+  p {
+    margin-bottom: 0;
+  }
+}
