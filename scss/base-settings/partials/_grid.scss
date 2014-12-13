@@ -27,11 +27,6 @@ $large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-w
 // $xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})" !default;
 // $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})" !default;
 
-// Legacy
-$small: $medium-up;
-$medium: $medium-up;
-$large: $large-up;
-
 $text-direction: ltr !default;
 $default-float: left !default;
 $opposite-direction: right !default;
@@ -95,7 +90,6 @@ $opposite-direction: right !default;
   $last-column:false,
   $collapse:false,
   $float:true) {
-  position: relative;
   // If collapsed, get rid of gutter padding
   @if $collapse {
     padding-left: 0;
@@ -123,7 +117,6 @@ $opposite-direction: right !default;
 // ------ Create presentational classes for grid ------ //
 // $size - Name of class .l-1, .l-2, etc.
 @mixin grid-html-classes($size) {
-  .col { @include grid-column($columns:false); }
   @for $i from 1 through $total-columns {
     .#{$size}#{-$i} { @include grid-column($columns:$i,$collapse:null,$float:false); }
   }
@@ -143,19 +136,13 @@ $opposite-direction: right !default;
   }
 }
 
-.col { @include grid-column($columns:$total-columns); }
-@media #{$small-up} {
-  @include grid-html-classes($size:s);
+.col {
+  @include grid-column($columns:$total-columns);
+  position: relative;
 }
-@media #{$medium-up} {
-  @include grid-html-classes($size:m);
-}
-@media #{$large-up} {
-  @include grid-html-classes($size:l);
-}
-// @media #{$xlarge-up} {
-//   @include grid-html-classes($size:xl);
-// }
-// @media #{$xxlarge-up} {
-//   @include grid-html-classes($size:xxl);
-// }
+
+@media #{$small-up}  { @include grid-html-classes($size:s); }
+@media #{$medium-up} { @include grid-html-classes($size:m); }
+@media #{$large-up}  { @include grid-html-classes($size:l); }
+// @media #{$xlarge-up} { @include grid-html-classes($size:xl); }
+// @media #{$xxlarge-up} { @include grid-html-classes($size:xxl); }
