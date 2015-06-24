@@ -49,6 +49,6 @@ module.exports = function (grunt) {
     }); // close initConfig
 
   // default tasks
-  grunt.registerTask('default', 'watch');
+  grunt.registerTask('default', ['compass', 'autoprefixer', 'cssmin', 'watch']);
 
 };
