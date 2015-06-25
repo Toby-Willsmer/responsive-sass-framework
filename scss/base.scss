@@ -6,8 +6,8 @@
 @import "base-settings/base-global";      // Global settings - resets etc
 @import "base-settings/functions/all";
 @import "base-settings/mixins/all";
-@import "base-settings/base-settings";    // base variables used across entire site
-@import "base-settings/partials/colours"; // base colours used across entire site
+@import "base-settings/variables/base-settings";    // base variables used across entire site
+@import "base-settings/variables/colours"; // base colours used across entire site
 
 // ------ Individual imports ------ //
 @import "base-settings/partials/grid",
