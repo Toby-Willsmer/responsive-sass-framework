@@ -59,7 +59,6 @@ input[type="checkbox"] + label,
 input[type="radio"] + label {
   display: $in-block;
   margin: 0 $space-xsml $space-medl $space-xsml;
-  vertical-align: top;
 }
 
 input[type="checkbox"],
@@ -74,6 +73,7 @@ input[type="radio"] + label {
 select {
   @include respond-to ($xsmall-landscape) {
     width: $full-width/2;
+    height: 32px;
   }
   + option {
     &:hover,
