@@ -9,7 +9,7 @@ button, .button {
   color: $white;
   text-align: center;
   background: $grey-lighter;
-  @include transition(all 0.3s ease);
+  transition: all 0.3s ease-in-out;
   @include respond-to ($xsmall-landscape) {
     width: auto;
   }
@@ -43,7 +43,7 @@ button, .button {
 
 // blue button
 .btn-blue {
-  @include bg-gradient($blue, $blue-darker, true);
+  @include bg-gradient(top, $blue, $blue-darker, true);
   border-color: $blue-dark;
   &:hover,
   &:focus {
@@ -53,7 +53,7 @@ button, .button {
 
 // green button
 .btn-green {
-  @include bg-gradient($green, $green-darker, true);
+  @include bg-gradient(top, $green, $green-darker, true);
   border-color: $green-dark;
   &:hover,
   &:focus {
@@ -63,7 +63,7 @@ button, .button {
 
 // red button
 .btn-red {
-  @include bg-gradient($red, $red-darker, true);
+  @include bg-gradient(top, $red, $red-darker, true);
   border-color: $red-dark;
   &:hover,
   &:focus {
