@@ -45,22 +45,22 @@ $purple-dark:           darken($purple, $dark);
 $purple-darker:         darken($purple, $darker);
 
 // orange tones
-$orange-lightest:       lighten($orange, $lightest);
+$orange-lightest:       lighten($orange, $lightest - 5);
 $orange-lighter:        lighten($orange, $lighter);
 $orange-light:          lighten($orange, $light);
 $orange-dark:           darken($orange, $dark);
-$orange-darker:         darken($orange, $darker);
+$orange-darker:         darken($orange, $darker + 5);
 
 // yellow tones
-$yellow-lightest:       lighten($yellow, $lightest);
+$yellow-lightest:       lighten($yellow, $lightest - 5);
 $yellow-lighter:        lighten($yellow, $lighter);
 $yellow-light:          lighten($yellow, $light);
 $yellow-dark:           darken($yellow, $dark);
-$yellow-darker:         darken($yellow, $darker);
+$yellow-darker:         darken($yellow, $darker + 5);
 
 // grey tones
-$grey-lightest:         lighten($grey, $lightest);
-$grey-lighter:          lighten($grey, $lighter);
+$grey-lightest:         lighten($grey, $lightest - 10);
+$grey-lighter:          lighten($grey, $lighter - 5);
 $grey-light:            lighten($grey, $light);
-$grey-dark:             darken($grey, $dark);
-$grey-darker:           darken($grey, $darker);
+$grey-dark:             darken($grey, $dark + 5);
+$grey-darker:           darken($grey, $darker +10);
