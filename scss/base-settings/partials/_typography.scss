@@ -117,6 +117,14 @@ a {
   @include respond-to ($large) {
     @include font-rhythm($base-font-size, 6, 1);
   }
+  &:after,
+  &:before { // this fixes the issue with underlined content in a tags 
+    text-decoration: underline;
+  }
+  &:after,
+  &:before { // the above needs to be there to be able to cancel it out here
+    text-decoration: none;
+  }
 }
 
 // ------ Lists ------ //
