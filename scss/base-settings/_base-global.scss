@@ -1,46 +1,36 @@
 *,
 *:before,
-*:after {
-  box-sizing: border-box; 
-}
+*:after { box-sizing: border-box; }
 
 html {
+  height: 100%; // Prevent iOS text size adjust after orientation change, without disabling user zoom.
+  font-size: 100%; // same as above
   font-family: arial;
 }
 
-html, body {
-  height: 100%;
-  font-size: 100%;
-  overflow-x: hidden; // used for the off canvas to hide the overflow
-}
+html,
+body { overflow-x: hidden; } // used for the off canvas to hide the overflow
 
 body {
   background: #fff;
   color: #333;
   position: relative;
+  margin: 0; 
+  padding: 0;
 }
+
+main,
+footer { padding-top: 24px; }
 
 // get images and embeds to work properly
 img,
 object,
-embed { max-width: 100%; height: auto; }
+embed { max-width: 100%; }
 
-object,
-embed { height: 100%; }
-img { -ms-interpolation-mode: bicubic; }
-
-#map_canvas,
-.map_canvas {
-  img,
-  embed,
-  object { max-width: none !important;
-  }
-}
-
-// Get rid of gap under images
 img {
+  -ms-interpolation-mode: bicubic;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: middle; // Get rid of gap under images
 }
 
 // conditional IE message
