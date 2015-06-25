@@ -1,0 +1,56 @@
+// padding - optional, or can be set individually as per usuage to avoid overwriting
+.panel {
+  margin-bottom: $space-lrg;
+  &.borders {
+    border: solid 1px;
+    border-left: $space-sml;
+    &.grey {
+      border-color: $grey;
+    }
+    &.blue {
+      border-color: $blue;
+    }
+    &.red {
+      border-color: $red;
+    }
+    &.yellow {
+      border-color: $yellow;
+    }
+    &.green {
+      border-color: $green;
+    }
+  }
+  &.grey {
+    background-color: $grey;
+  }
+  &.blue {
+    background-color: $blue;
+  }
+  &.red {
+    background-color: $red;
+  }
+  &.yellow {
+    background-color: $yellow;
+  }
+  &.green {
+    background-color: $green;
+  }
+  &.wide { // full browser width
+    position: relative;
+    &:before,
+    &:after {
+      content: "";
+      width: $full-width/2;
+      min-height: $full-height;
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      background-color: inherit;
+    }
+    &:before { left: $full-width/2; }
+    &:after  { right: $full-width/2; }
+  }
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
