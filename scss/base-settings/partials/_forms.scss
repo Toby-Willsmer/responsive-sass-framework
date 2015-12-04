@@ -23,6 +23,8 @@ label {
   }
 }
 
+// set the widths
+input[type="file"],
 input[type="text"],
 input[type="password"],
 input[type="date"],
@@ -36,13 +38,35 @@ input[type="search"],
 input[type="tel"],
 input[type="time"],
 input[type="url"],
+textarea {
+  width: $full-width;
+  display: $block;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+}
+
+input[type="checkbox"],
+input[type="radio"],
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: $in-block;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  margin: 0 $space-xsml $space-medl $space-xsml;
+}
+
+input,
 textarea,
 select {
   @include form-general;
-}
-
-input[type="file"] {
-  width: $full-width;
 }
 
 input {
@@ -55,26 +79,8 @@ textarea {
   @include font-rhythm(14);
 }
 
-input[type="checkbox"] + label,
-input[type="radio"] + label {
-  display: $in-block;
-  margin: 0 $space-xsml $space-medl $space-xsml;
-}
-
-input[type="checkbox"],
-input[type="radio"],
-input[type="checkbox"] + label,
-input[type="radio"] + label {
-  &:hover {
-    cursor: pointer;
-  }
-}
-
 select {
-  @include respond-to ($xsmall-landscape) {
-    width: $full-width/2;
-    height: 32px;
-  }
+    height: 42px;
   + option {
     &:hover,
     &:focus {

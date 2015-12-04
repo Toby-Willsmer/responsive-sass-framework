@@ -18,12 +18,10 @@ $form-spacing: rem-calc(1) !default;
 }
 
 @mixin form-general {
-  width: $full-width;
-  display: $block;
   border-radius: $radius/2;
   border: solid 1px $grey-light;
   @include font-rhythm(14, 18, 1);
-  padding: $space-xsml;
+  padding: $space-sml;
   background: $white;
   &:focus {
     background-color: $grey-lightest;
