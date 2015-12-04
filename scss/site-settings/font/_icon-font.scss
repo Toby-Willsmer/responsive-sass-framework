@@ -6,21 +6,23 @@
        url('../scss/site-settings/font/icons/fontello.svg?71791683#fontello') format('svg');
 }
 
-[class^="icon-"]:before, [class*=" icon-"]:before,
-[class^="icon-"]:after, [class*=" icon-"]:after {
+[class*="icon-"] {
+  margin-right: .2rem;
+}
+
+[class^="icon-"]:before,
+[class^="icon-"]:after {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
   speak: none;
-  display: $in-block;
   text-decoration: none;
-  width: 1rem;
-  margin-right: .2rem;
-  text-align: center;
   font-variant: normal;
   text-transform: none;
-  line-height: 1rem;  // fix buttons height, for twitter bootstrap
-  font-size: inherit;
+  // remove the below 3 lies if you want the icons to sit left aligned
+  width: 1rem;
+  display: $in-block;
+  text-align: center;
 }
 
 // Classes for icons
@@ -45,8 +47,4 @@
 
 .animate-spin {
   @include animation('rotate-spinner 1.5s infinite linear');
-  &:before,
-  &:after {
-    margin-left: .2rem; // fixes animation for centering
-  }
 }
