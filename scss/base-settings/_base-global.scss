@@ -4,12 +4,10 @@
 
 html {
   height: 100%; // Prevent iOS text size adjust after orientation change, without disabling user zoom.
-  font-size: 100%; // same as above
-  font-family: arial;
+  font-size: 16px; // same as above
+  font-family: sans-serif;
+  line-height: 1.5;
 }
-
-html,
-body { overflow-x: hidden; } // used for the off canvas to hide the overflow
 
 body {
   background: #fff;
@@ -17,6 +15,7 @@ body {
   position: relative;
   margin: 0; 
   padding: 0;
+  overflow-x: hidden;  // used for the off canvas to hide the overflow
 }
 
 main,
