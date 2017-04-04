@@ -3,7 +3,7 @@ Sass_framework
 This is a lightweight responsive framework I put together to use as a base for building medium to large websites.
 Fully configurable/expandable to any set up.
 
-You will need to install
+Dependancies
 ==============
 node : http://nodejs.org/<br/>
 npm : https://www.npmjs.org/<br/>
