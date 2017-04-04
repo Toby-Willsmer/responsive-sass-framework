@@ -1,4 +1,4 @@
-Sass_framework
+Sass website framework
 ==============
 This is a lightweight responsive framework I put together to use as a base for building medium to large websites.
 Fully configurable/expandable to any set up.
