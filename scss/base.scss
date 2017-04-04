@@ -1,16 +1,37 @@
-// Make sure the charset is set appropriately
+// Base settings for the site, these should be kept to the base styles and some use case sitewide quirks only
+// any specific pages or sections should be seperate sass structures outside the base-settings folder.
+
+// Make sure the charset is set appropriately, this must be rendered first.
 @charset "UTF-8";
 
-// ------ All the base stuff ------ //
-@import "base-settings/normalize";
-@import "base-settings/base-global";      // Global settings - resets etc
-@import "base-settings/functions/all";
-@import "base-settings/mixins/all";
-@import "base-settings/variables/base-settings";    // base variables used across entire site
-@import "base-settings/variables/colours"; // base colours used across entire site
+// The architecture below is based around the 7 - 1 technique https://sass-guidelin.es/#architecture
 
-// ------ Individual imports ------ //
-@import "base-settings/partials/grid",
-        "base-settings/partials/buttons",
-        "base-settings/partials/forms",
-        "base-settings/partials/typography";
+// Shared utilities - mixins, varilables, functions - nothing is rendered from here.
+@import "shared-utilities";
+
+// External assets - normalise, resets, installed fonts etc
+@import "vendors/normalize";
+
+// Global base stuff - These are soley for the global base settings, any additions go in the modules file or in a seperate specific stylesheet 
+@import "base/keyframes-animations",
+        "base/base-global",
+        "base/typography",
+        "base/lists",
+        "base/buttons",
+        "base/forms";
+
+// Layout dependancies
+@import "layouts/grid",
+        "layouts/header",
+        "layouts/navigation",
+        "layouts/footer";
+
+// Individual modules - This is where the bulk os the sass lives
+@import "modules/panels",
+        "modules/inline-lists";
+
+// For individual pages that are within the global styles - all specific sections of the site should be seperate from here
+// e.g @import "pages/sitemap";
+
+// Different themes - admin, print etc
+@import "themes/ui-only"; // *** this is for the ui guide only remove in projects **** //

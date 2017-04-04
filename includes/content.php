@@ -1,48 +1,5 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="Max 10 keywords go here"/>
-    <meta name="description" content="Short desciption goes here"/>
-    <meta author="Toby Willsmer"/>
-    <title>title here</title>
-    <link rel="shortcut icon" href="favicon.ico"/>
-    <link rel="stylesheet" href="css/base.min.css" />
-    <!--[if lt IE 9]>
-      <link rel="stylesheet" href="css/ie.min.css" />
-    <![endif]-->
-  </head>
-  <body>
-    <!--[if lt IE 9]>
-      <div class="not-supported"><p class="icon-attention"> This website is <strong>NOT</strong> fully supported in older versions of Internet Explorer, please download a browser such as Chrome or Firefox.</p>
-      </div>
-    <![endif]-->
-
-    <!-- *** THE BELOW IS FOR DISPLAY PURPOSES ONLY, REMMOVE FOR PRODUCTION *** -->
-      <div class="not-supported"><p class="icon-attention"> This website is <strong>NOT</strong> supported in older versions of Internet Explorer and may not display/function correctly.<br/>Please download a FREE modern up to date browser such as Chrome or Firefox.</p>
-      <p><strong>**THIS IS FOR DISPLAY PURPOSES ONLY, REMMOVE FOR PRODUCTION**</strong></p>
-      </div>
-    <!-- *** END ABOVE REMOVE *** -->
-
-  <!-- header -->
-    <header>
       <div class="row">
-        <nav class="col" role="navigation">
-          <img class="logo" src="img/web-images/logo.jpg" alt="Logo" />
-          <ul class="inline-list main-nav" role="menu">
-            <li role="menu-item"><a href="#" title="link">Link 1</a></li>
-            <li role="menu-item"><a href="#" title="link">Link 2</a></li>
-            <li role="menu-item"><a href="#" title="link">Link 3</a></li>
-            <li role="menu-item"><a href="#" title="link">Link 4</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-  <!-- main content -->
-    <main role="main">
-      <div class="row">
-        <section class="col">
+        <section class="s-12 m-5 col">
           <h1>H1 heading</h1>
           <h2>H2 heading</h2>
           <h3>H3 heading</h3>
@@ -50,36 +7,32 @@
           <h5>H5 heading</h5>
           <h6>H6 heading</h6>
         </section>
-        <section class="col">
+        <section class="s-12 m-7 col">
           <h3>Paragraph</h3>
           <article>
             <p>lorem ipsum tasty burger dolor nedsium moreium relish. lorem ipsum tasty burger dolor nedsium moreium relish.lorem ipsum tasty burger dolor nedsium moreium relish.lorem ipsum tasty burger dolor nedsium moreium relish. 
-              <br/><a href="#">Text link</a>
-              <br/><strong>Strong text</strong>
-              <br/><em>Text has added emphasis (em)</em>
-              <br/><b>The b element</b>
-              <br/><i>The i element</i>
-              <br/><del>Deleted text</del> 
-              <br/><ins>Inserted text</ins>
-              <br/>Superscript<sup>®</sup>
-              <br/>Subscript - H<sub>2</sub>O
-              <br/><small>Small text</small>
-              <br/>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr>
-              <br/>Keybord input: <kbd>Cmd</kbd>
-              <br/><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">Inline quotation</q>
-              <br/><cite>This is a citation</cite>
-              <br/><dfn>definition (dfn) element</dfn>
-              <br/>The <mark>Mark</mark> element
-              <br/><samp>This is sample output from a computer program</samp>
-              <br/>
-              <code>
-                &lt;div class=&quot;wrap&quot;&gt;<br/>
-                &emsp;&lt;p&gt;This is what code looks like&lt;/p&gt;<br/>
-                &lt;/div&gt;
-              </code>
-
+            <br/><strong>Strong text</strong>
+            <br/><small>Small text</small>
             </p>
           </article>
+    <!-- nested -->
+            <div class="row">
+              <section class="s-12 m-6 col">
+                <h3>Code</h3>
+                <code>
+                  &lt;div class=&quot;s-12 m-7 col&quot;&gt;<br/>
+                    &emsp;&lt;h2&gt;Paragraph&lt;/h2&gt;<br/>
+                    &emsp;&lt;p&gt;lorem ipsum tasty&lt;/p&gt;<br/>
+                  &lt;/div&gt;
+                </code>
+              </section>
+              <article class="s-12 m-6 col">
+                <h3>Preview</h3>
+                <pre>lorem ipsum tasty burger dolor nedsium moreium relish. lorem ipsum tasty burger dolor nedsium moreium relish.
+                </pre>
+              </article>
+            </div>
+    <!-- end nested -->
         </section>
       </div>
     <!-- lists -->
@@ -89,16 +42,16 @@
           <h3>Lists</h3>
         </div>
         <section class="s-12 m-6 l-3 col">
-          <h4>Unordered</h4>
-          <ul>
+          <h4>No bullet</h4>
+          <ul class="no-bullet">
             <li>list item 1</li>
             <li>list item 2</li>
             <li>list item 3</li>
           </ul>
         </section>
         <section class="s-12 m-6 l-3 col">
-          <h4>Unordered no bullet</h4>
-          <ul class="no-bullet">
+          <h4>Unordered</h4>
+          <ul>
             <li>list item 1</li>
             <li>list item 2</li>
             <li>list item 3</li>
@@ -207,30 +160,41 @@
     <div class="row">
       <section class="s-12 m-6 col">
         <h3>Buttons</h3>
-        <button href="#" class="button btn-blue">Default button</button><br/>
-        <button href="#" class="button btn-text">Text button</button><br/>
+        <a href="#" class="button btn-blue btn-large">Large button</a><br/><br/>
+        <a href="#" class="button btn-blue">Default button</a><br/><br/>
+        <a href="#" class="button btn-blue btn-small">Tiny button</a><br/><br/>
+        <a href="#" class="button btn-text">Text button</a><br/><br/>
       </section>
       <section class="s-12 m-6 col">
         <h3>Button colours</h3>
-        <button href="#" class="button btn-green">Success button</button><br/>
-        <button href="#" class="button btn-red">Alert button</button><br/>
-        <button href="#" class="button btn-grey">Grey button</button><br/>
-        <button href="#" class="button" disabled>Disabled button</button><br/>
+        <a href="#" class="button btn-green">Success button</a><br/><br/>
+        <a href="#" class="button btn-red">Alert button</a><br/><br/>
+        <a href="#" class="button btn-grey">Back button</a><br/><br/>
+        <a href="#" class="button" disabled>Disabled button</a><br/><br/>
       </section>
     </div>
   <!-- end base elements. -->
     <hr/>
   <!-- icon font -->
     <div class="row">
-      <section class="col">
+      <section class="s-12 m-6 col">
+      <h3>Useful icons</h3>
+        <i class="icon-plus"></i> icon-plus - <code>\e801</code><br/>
+        <i class="icon-minus"></i> icon-minus - <code>\e800</code><br/>
+        <i class="icon-twitter"></i> icon-twitter - <code>\e802</code><br/>
+        <i class="icon-facebook"></i> icon-facebook - <code>\e805</code><br/>
+        <i class="icon-left-sml"></i> icon-left-sml - <code>\e807</code><br/>
+        <i class="icon-right-sml"></i> icon-right-sml - <code>\e806</code><br/>
+        <i class="icon-attention"></i> icon-attention - <code>\e803</code><br/>
+        <i class="icon-spin animate-spin"></i> icon-spin - <code>\e804</code><br/><br/>
+      </section>
+      <section class="s-12 m-6 col">
         <h3>Handy unicode</h3>
-        <p>
-          &#x2b; <code>&amp;#x2b;</code> - plus not tested<br/>
-          &#x2212; <code>&amp;#x2212;</code> - minus not tested<br/>
-          &#x2261; <code>&amp;#x2261;</code> - burger 96%<br/>
-          &#x2713; <code>&amp;#x2713;</code> - tick 95%<br/>
-          &#x2715; <code>&amp;#x2715;</code> - cross 92%
-        </p>
+        &#x2b; <code>&amp;#x2b;</code> - plus not tested<br/>
+        &#x2212; <code>&amp;#x2212;</code> - minus not tested<br/>
+        &#x2261; <code>&amp;#x2261;</code> - burger 96%<br/>
+        &#x2713; <code>&amp;#x2713;</code> - tick 95%<br/>
+        &#x2715; <code>&amp;#x2715;</code> - cross 92%<br/>
       </section>
     </div>
     <hr/>
@@ -304,116 +268,61 @@
       </section>
     </div>
     <hr/>
-  <!-- panels -->
-    <div class="row">
-      <div class="col">
-        <div class="panel panel-wide grey">
-          <p><strong>Panel full width</strong> - lorem ipsum tasty burger dolor nedsium moreium relish. lorem ipsum tasty burger dolor nedsium moreium relish.</p>
-        </div>
-      </div>
-      <div class="m-6 col">
-        <div class="panel panel-borders grey">
-          <p><strong>Panel with grey border</strong> - lorem ipsum tasty burger dolor nedsium moreium relish. lorem ipsum tasty burger dolor nedsium moreium relish.</p>
-        </div>
-      </div>
-      <div class="m-6 col">
-        <div class="panel panel-borders red">
-          <p><strong>Panel with red border</strong> - lorem ipsum tasty burger dolor nedsium moreium relish. lorem ipsum tasty burger dolor nedsium moreium relish.</p>
-        </div>
-      </div>
-      <div class="m-6 col">
-        <div class="panel panel-borders yellow">
-          <p><strong>Panel with yellow border</strong> - lorem ipsum tasty burger dolor nedsium moreium relish. lorem ipsum tasty burger dolor nedsium moreium relish.</p>
-        </div>
-      </div>
-      <div class="m-6 col">
-        <div class="panel panel-borders green">
-          <p><strong>Panel with green border</strong> - lorem ipsum tasty burger dolor nedsium moreium relish. lorem ipsum tasty burger dolor nedsium moreium relish.</p>
-        </div>
-      </div>
-    </div>
-
-    <hr/>
   <!-- grid -->
   <!-- 1 -->
     <div class="row">
       <div class="col">
       <h3>Grid layout</h3>
-        <div class="panel grey"></div>
+        <div class="panel"></div>
       </div>
     </div>
   <!-- 2 -->
     <div class="row">
       <div class="s-6 col">
-        <div class="panel grey"></div>
+        <div class="panel"></div>
       </div>
       <div class="s-6 col">
-        <div class="panel grey"></div>
+        <div class="panel"></div>
       </div>
     </div>
   <!-- 3 -->
     <div class="row">
       <div class="s-4 col">
-        <div class="panel grey"></div>
+        <div class="panel"></div>
       </div>
       <div class="s-8 col">
-        <div class="panel grey"></div>
+        <div class="panel"></div>
       </div>
     </div>
   <!-- 4 -->
     <div class="row">
       <div class="s-3 col">
-        <div class="panel grey"></div>
+        <div class="panel"></div>
       </div>
       <div class="s-9 col">
-        <div class="panel grey"></div>
+        <div class="panel"></div>
       </div>
     </div>
   <!-- 6 -->
     <div class="row">
       <div class="s-2 col">
-        <div class="panel grey"></div>
+        <div class="panel"></div>
       </div>
       <div class="s-10 col">
-        <div class="panel grey"></div>
+        <div class="panel"></div>
       </div>
     </div>
     <!-- 2 collased padding-->
       <div class="row collapse">
         <div class="s-12 m-6 col">
-          <div class="panel grey">
+          <div class="panel">
             <p>add collapse class on row</p>
           </div>
         </div>
         <div class="s-12 m-6 col">
-          <div class="panel grey">
+          <div class="panel">
             <p>add collapse class on row</p>
           </div>
         </div>
       </div>
   <!-- end grid -->
-    </main>
-  <!-- footer -->
-    <footer>
-      <div class="row">
-        <div class="col">
-          <p>Footer content goes in here</p>
-        </div>
-        <div class="col footer-copyright">
-          <ul class="inline-list">
-            <li><a href="#">Inline link 1</a></li>
-            <li><a href="#">Inline link 2</a></li>
-            <li><a href="#">Inline link 3</a></li>
-            <li><a href="#">Inline link 4</a></li>
-          </ul>
-          <small>Copyright &copy; 2000 - <?php echo date("Y") ?><!-- this page will need to be php for this to work -->
-          </small>
-        </div>
-      </div>
-    </footer>
-<!-- js scripts -->
-
-<!-- Google analytics -->
-
-  </body>
-</html>
