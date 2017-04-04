@@ -1,6 +1,6 @@
 Sass_framework
 ==============
-This is a lightweight responsive framework I put together to use as a base for building websites/apps.
+This is a lightweight responsive framework I put together to use as a base for building medium to large websites.
 Fully configurable/expandable to any set up.
 
 You will need to install
@@ -16,23 +16,17 @@ Grunt is used to run these npm plugins
 autoprefixer : https://www.npmjs.org/package/grunt-autoprefixer<br/>
 cssmin : https://www.npmjs.org/package/grunt-contrib-cssmin
 
-Grunt also uses the compass config file to run the compiling of the scss
-Just run 'grunt' from the command line in the directory to run the tasks
+Grunt compiles the scss instead of Compass
 
 The grid
 ==============
 The grid is taken from Zurbs Foundation 5 and stripped out to its basic grid and optimised to make it as light as possible.
 
-The icon font
-==============
-The font is from fontello and has a config file included so you can easily add/subtract icons as needed.
-http://fontello.com/
-
 In the SCSS directory
 ==============
-base-settings/ : framework main settings including mixins, functions and the base variables for the site.
+base-settings/ : The frameworks main settings including mixins, functions and the base variables for the site. The architecture here is based around the 7 - 1 technique https://sass-guidelin.es/#architecture
 
-site-settings/ : This is where the site/app specific files go.
+There is also an 'example-external-rules' file & folder for an additional seperate CSS sheet to be generated if needed.
 
 Browser compatibility
 ==============
