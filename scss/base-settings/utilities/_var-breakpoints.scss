@@ -1,0 +1,15 @@
+// Variables - Breakpoints for inline control used in the respond-to mixin
+
+$xsmall:           calc-em( 320px );
+$xsmall-landscape: calc-em( 432px );
+
+$small:            calc-em( 640px );
+$small-landscape:  calc-em( 756px );
+
+$medium:           calc-em( 960px );
+$medium-landscape: calc-em( 1024px );
+
+$large:            calc-em( 1280px );
+$large-landscape:  calc-em( 1440px );
+
+$one-px-as-em:     calc-em( 1px );

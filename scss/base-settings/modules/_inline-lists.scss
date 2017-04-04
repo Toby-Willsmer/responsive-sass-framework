@@ -1,0 +1,26 @@
+// Inline lists - base list settings are in the /base dir
+
+.inline-list {
+  padding-left: 0;
+  list-style: none;
+  li {
+    display: $in-block; 
+    padding-right: $space-sml;
+    margin-right: -4px; //caters for the default li margin when inline-block
+    &:last-child {
+      padding-right: 0;
+      margin-right: 0;
+      a {
+        border-right: none;
+      }
+    }
+  }
+  // links
+  a {
+    padding: 0 $space-sml 0 $space-sml;
+    border-right: 1px solid $grey-light;
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+}

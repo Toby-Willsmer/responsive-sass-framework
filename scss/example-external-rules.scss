@@ -1,0 +1,14 @@
+// This file is just to show how external files will/should be structured.
+
+// The generated CSS file will need to be added in the markup below the base CSS files
+
+// The shared base utility file. Functions, mixins, variables etc
+// Include this in all external files if you want to share the global things.
+@import "shared-utilities";
+
+// The external files partials
+@import "example-external-rules/external_partial-1",
+        "example-external-rules/external_partial-2";
+
+
+

@@ -1,0 +1,6 @@
+// External file partial - 2
+
+// Example - uses the global imported mixin and variable
+h1 {
+  @include font-rhythm($base-font-size,4);
+}

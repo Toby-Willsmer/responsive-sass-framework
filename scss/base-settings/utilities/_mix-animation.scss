@@ -1,0 +1,11 @@
+// Mixin - animation
+
+@mixin keyframes($animation-name) {
+  @keyframes $animation-name {
+    @content;
+  }
+}
+
+@mixin animation($string) {
+  animation: #{$string};  
+}

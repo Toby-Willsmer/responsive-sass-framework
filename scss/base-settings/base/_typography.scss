@@ -1,0 +1,88 @@
+// Typography - these are the base settings for typography any variations are in the /modules dir
+
+// Vertical rhythm usage
+
+//  font size in PX and it will calculate the REM
+//  @include font-rhythm(24);
+
+//  bottom margin - no = 0 leave blank for default
+//  @include font-rhythm(24, no);
+
+//  bottom margin specfic px value
+//  @include font-rhythm(24,32);
+
+//  line height - 1 = 0
+//  @include font-rhythm(24, yes, 1);
+
+//  line-height specfic px value
+//  @include font-rhythm(24, yes, 40);
+
+// Header h tags
+h1, h2, h3, h4, h5, h6, p { margin-top: 0; }
+h1, h2, h3, h4, h5, h6    { font-family: $font-family; }
+h1, h2, h3, h4            { font-weight: $font-weight-norm; }
+h5, h6                    { font-weight: $font-weight-bold; }
+
+h1 {
+  @include font-rhythm(28, yes, 24);
+  @include respond-to ($large) {
+    @include font-rhythm(42);
+  }
+}
+
+h2 {
+  @include font-rhythm(24, yes, 24);
+  @include respond-to ($large) {
+    @include font-rhythm(38);
+  }
+}
+
+h3 {
+  @include font-rhythm(18, yes, 24);
+  @include respond-to ($large) {
+    @include font-rhythm(32);
+  }
+}
+
+h4 {
+  @include font-rhythm($base-font-size, yes, 24);
+  @include respond-to ($large) {
+    @include font-rhythm(28);
+  }
+}
+
+h5 {
+  @include font-rhythm($base-font-size, yes, 24);
+}
+
+h6 {
+  @include font-rhythm($base-font-size, yes, 24);
+}
+
+// Paragraph
+p, address {
+  @include font-rhythm($base-font-size, yes, 24);
+}
+
+// Links
+a {
+  display: $in-block;
+  @include font-rhythm($base-font-size, 6, 1);
+  color: $blue; 
+  text-decoration: $no-underline;
+  background: transparent;
+  &:focus,
+  &:active,
+  &:hover {
+    text-decoration: underline;
+    outline: 0;
+  }
+  &:after,
+  &:before { // this fixes the issue with underlined content in a tags 
+    text-decoration: underline;
+  }
+  &:after,
+  &:before { // the above needs to be there to be able to cancel it out here
+    text-decoration: none;
+  }
+}

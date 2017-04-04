@@ -1,0 +1,13 @@
+/* line 4, ../scss/example-external-rules/_external_partial-1.scss */
+
+h1 {
+  color: #57a800;
+}
+
+/* line 4, ../scss/example-external-rules/_external_partial-2.scss */
+
+h1 {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.25rem;
+}

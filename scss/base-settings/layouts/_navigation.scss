@@ -1,0 +1,14 @@
+// Navigation - the main navigation at the top of the page
+
+// the below is just a quick example.
+.main-nav {
+  float: right;
+  margin-bottom: 0;
+  li {
+    float: left;
+    a {
+      display: $in-block;
+      padding: $space-sml;
+    }
+  }
+}

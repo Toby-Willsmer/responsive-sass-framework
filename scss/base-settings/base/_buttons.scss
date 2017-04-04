@@ -1,0 +1,76 @@
+// Buttons - these are the base setting for buttons any variations are in the /modules dir
+
+.button {
+  display: $in-block;
+  width: $full-width;
+  padding: $space-sml $space-med;
+  border: 1px solid transparent;
+  border-radius: 0; // cancels out the default <button> 2px radius
+  @include font-rhythm(16, yes, 1); // done here as we can have the button class on an <a>
+  color: $white;
+  text-align: center;
+  background: $grey-lighter;
+  transition: background $timing, color $timing;
+  @include respond-to ($xsmall-landscape) {
+    width: auto;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+  }
+  &[disabled] {
+    cursor: default;
+  }
+  &.btn-text {
+    border: none;
+    background: none;
+    color: $blue;
+    padding: 0;
+  }
+}
+
+// Button colours
+
+// blue button
+.btn-blue {
+  background: $blue;
+  &:hover,
+  &:focus {
+    background: $blue-darker;
+  }
+}
+
+// green button
+.btn-green {
+  background: $green;
+  &:hover,
+  &:focus {
+    background: $green-darker;
+  }
+}
+
+// red button
+.btn-red {
+  background: $red-dark;
+  &:hover,
+  &:focus {
+    background: $red-darker;
+  }
+}
+
+// grey button hover state
+.btn-grey {
+  color: $grey-darker;
+  &:hover,
+  &:focus {
+    color: $white;
+    background: $grey-dark;
+  }
+}
+
+[disabled],
+.btn-grey {
+  color: $grey-darker;
+  border-color: $grey-dark;
+}

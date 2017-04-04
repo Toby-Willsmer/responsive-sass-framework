@@ -1,0 +1,8 @@
+// Functions - converstions
+
+// usage - if the untit has a value i.e 67px
+@function convert-to-rem($value, $base-value: $rem-base)  {
+  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
+  @return $value;
+}
