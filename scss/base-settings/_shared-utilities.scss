@@ -1,0 +1,27 @@
+// This file is used as an import for the shared and global parts.
+// The below should NOT render any CSS if directly complied
+
+// inlude this as an import in the top an individual scss file to share all the global things
+// e.g - @import "shared-utilities";
+
+// Compass
+@import "compass";
+
+// functions
+@import "utilities/func-converstions",
+        "utilities/func-calculations",
+        "utilities/func-grid";
+
+// Variables
+@import "utilities/var-colours",
+        "utilities/var-breakpoints",
+        "utilities/var-typography",
+        "utilities/var-common",
+        "utilities/var-forms";
+
+// mixins
+@import "utilities/mix-animation",
+        "utilities/mix-forms",
+        "utilities/mix-general",
+        "utilities/mix-media-queries",
+        "utilities/mix-typography";
