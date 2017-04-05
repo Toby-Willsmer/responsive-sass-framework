@@ -3,13 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="Max 15 keywords go here"/>
+    <meta name="keywords" content="Max 10 keywords go here"/>
     <meta name="description" content="Short desciption goes here"/>
     <meta author="Toby Willsmer"/>
     <title>title here</title>
     <link rel="shortcut icon" href="favicon.ico"/>
     <link rel="stylesheet" href="css/base.min.css" />
-    <link rel="stylesheet" href="css/styles.min.css" />
     <!--[if lt IE 9]>
       <link rel="stylesheet" href="css/ie.min.css" />
     <![endif]-->
@@ -43,7 +42,7 @@
   <!-- main content -->
     <main role="main">
       <div class="row">
-        <section class="s-12 m-5 col">
+        <section class="col">
           <h1>H1 heading</h1>
           <h2>H2 heading</h2>
           <h3>H3 heading</h3>
@@ -51,32 +50,36 @@
           <h5>H5 heading</h5>
           <h6>H6 heading</h6>
         </section>
-        <section class="s-12 m-7 col">
+        <section class="col">
           <h3>Paragraph</h3>
           <article>
             <p>lorem ipsum tasty burger dolor nedsium moreium relish. lorem ipsum tasty burger dolor nedsium moreium relish.lorem ipsum tasty burger dolor nedsium moreium relish.lorem ipsum tasty burger dolor nedsium moreium relish. 
-            <br/><strong>Strong text</strong>
-            <br/><small>Small text</small>
+              <br/><a href="#">Text link</a>
+              <br/><strong>Strong text</strong>
+              <br/><em>Text has added emphasis (em)</em>
+              <br/><b>The b element</b>
+              <br/><i>The i element</i>
+              <br/><del>Deleted text</del> 
+              <br/><ins>Inserted text</ins>
+              <br/>Superscript<sup>®</sup>
+              <br/>Subscript - H<sub>2</sub>O
+              <br/><small>Small text</small>
+              <br/>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr>
+              <br/>Keybord input: <kbd>Cmd</kbd>
+              <br/><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">Inline quotation</q>
+              <br/><cite>This is a citation</cite>
+              <br/><dfn>definition (dfn) element</dfn>
+              <br/>The <mark>Mark</mark> element
+              <br/><samp>This is sample output from a computer program</samp>
+              <br/>
+              <code>
+                &lt;div class=&quot;wrap&quot;&gt;<br/>
+                &emsp;&lt;p&gt;This is what code looks like&lt;/p&gt;<br/>
+                &lt;/div&gt;
+              </code>
+
             </p>
           </article>
-    <!-- nested -->
-            <div class="row">
-              <section class="s-12 m-6 col">
-                <h3>Code</h3>
-                <code>
-                  &lt;div class=&quot;s-12 m-7 col&quot;&gt;<br/>
-                    &emsp;&lt;h2&gt;Paragraph&lt;/h2&gt;<br/>
-                    &emsp;&lt;p&gt;lorem ipsum tasty&lt;/p&gt;<br/>
-                  &lt;/div&gt;
-                </code>
-              </section>
-              <article class="s-12 m-6 col">
-                <h3>Preview</h3>
-                <pre>lorem ipsum tasty burger dolor nedsium moreium relish. lorem ipsum tasty burger dolor nedsium moreium relish.
-                </pre>
-              </article>
-            </div>
-    <!-- end nested -->
         </section>
       </div>
     <!-- lists -->
@@ -86,16 +89,16 @@
           <h3>Lists</h3>
         </div>
         <section class="s-12 m-6 l-3 col">
-          <h4>No bullet</h4>
-          <ul class="no-bullet">
+          <h4>Unordered</h4>
+          <ul>
             <li>list item 1</li>
             <li>list item 2</li>
             <li>list item 3</li>
           </ul>
         </section>
         <section class="s-12 m-6 l-3 col">
-          <h4>Unordered</h4>
-          <ul>
+          <h4>Unordered no bullet</h4>
+          <ul class="no-bullet">
             <li>list item 1</li>
             <li>list item 2</li>
             <li>list item 3</li>
@@ -205,7 +208,6 @@
       <section class="s-12 m-6 col">
         <h3>Buttons</h3>
         <button href="#" class="button btn-blue">Default button</button><br/>
-        <button href="#" class="button btn-blue btn-small">Small button</button><br/>
         <button href="#" class="button btn-text">Text button</button><br/>
       </section>
       <section class="s-12 m-6 col">
@@ -220,24 +222,15 @@
     <hr/>
   <!-- icon font -->
     <div class="row">
-      <section class="s-12 m-6 col">
-      <h3>Useful icons</h3>
-        <i class="icon-plus"></i> icon-plus - <code>\e801</code><br/>
-        <i class="icon-minus"></i> icon-minus - <code>\e800</code><br/>
-        <i class="icon-twitter"></i> icon-twitter - <code>\e802</code><br/>
-        <i class="icon-facebook"></i> icon-facebook - <code>\e805</code><br/>
-        <i class="icon-left-sml"></i> icon-left-sml - <code>\e807</code><br/>
-        <i class="icon-right-sml"></i> icon-right-sml - <code>\e806</code><br/>
-        <i class="icon-attention"></i> icon-attention - <code>\e803</code><br/>
-        <i class="icon-spin animate-spin"></i> icon-spin - <code>\e804</code><br/><br/>
-      </section>
-      <section class="s-12 m-6 col">
+      <section class="col">
         <h3>Handy unicode</h3>
-        &#x2b; <code>&amp;#x2b;</code> - plus not tested<br/>
-        &#x2212; <code>&amp;#x2212;</code> - minus not tested<br/>
-        &#x2261; <code>&amp;#x2261;</code> - burger 96%<br/>
-        &#x2713; <code>&amp;#x2713;</code> - tick 95%<br/>
-        &#x2715; <code>&amp;#x2715;</code> - cross 92%<br/>
+        <p>
+          &#x2b; <code>&amp;#x2b;</code> - plus not tested<br/>
+          &#x2212; <code>&amp;#x2212;</code> - minus not tested<br/>
+          &#x2261; <code>&amp;#x2261;</code> - burger 96%<br/>
+          &#x2713; <code>&amp;#x2713;</code> - tick 95%<br/>
+          &#x2715; <code>&amp;#x2715;</code> - cross 92%
+        </p>
       </section>
     </div>
     <hr/>
@@ -407,13 +400,13 @@
           <p>Footer content goes in here</p>
         </div>
         <div class="col footer-copyright">
-          <small class="inline-footer-links">
-            <a href="#">Inline link 1</a>
-            <a href="#">Inline link 2</a>
-            <a href="#">Inline link 3</a>
-            <a href="#">Inline link 4</a>
-            <a href="#">Inline link 5</a>
-            <br>Copyright &copy; 2000 - <?php echo date("Y") ?><!-- this page will need to be php for this to work -->
+          <ul class="inline-list">
+            <li><a href="#">Inline link 1</a></li>
+            <li><a href="#">Inline link 2</a></li>
+            <li><a href="#">Inline link 3</a></li>
+            <li><a href="#">Inline link 4</a></li>
+          </ul>
+          <small>Copyright &copy; 2000 - <?php echo date("Y") ?><!-- this page will need to be php for this to work -->
           </small>
         </div>
       </div>
