@@ -20,7 +20,7 @@ Grunt compiles the scss instead of Compass
 
 The grid
 ==============
-The grid is taken from Zurbs Foundation 5 and stripped out to its basic grid and optimised to make it as light as possible.
+The grid is made using flexbox using reusable alignment classes, there is also a simple flexbox model you use for layouts using the ame alignment classes.
 
 In the SCSS directory
 ==============
