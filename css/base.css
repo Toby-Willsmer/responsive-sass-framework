@@ -561,7 +561,7 @@ a {
   display: inline-block;
   font-size: 1rem;
   line-height: 1;
-  margin-bottom: 0.375rem;
+  margin-bottom: 0;
   color: #197295;
   text-decoration: none;
   background: transparent;
@@ -1281,7 +1281,6 @@ header {
 /* line 6, ../scss/base-settings/layouts/_navigation.scss */
 
 .main-nav a {
-  display: block;
   padding: 0.75rem;
 }
 
@@ -1367,45 +1366,37 @@ footer {
   border-color: #3d7500;
 }
 
-/* line 3, ../scss/base-settings/modules/_inline-lists.scss */
+/* line 4, ../scss/base-settings/modules/_inline-lists.scss */
 
-.inline-list {
-  padding-left: 0;
-  list-style: none;
+.inline-list li {
+  margin-right: 0.75rem;
 }
 
 /* line 6, ../scss/base-settings/modules/_inline-lists.scss */
 
-.inline-list li {
-  display: inline-block;
-  padding-right: 0.75rem;
-  margin-right: -4px;
-}
-
-/* line 10, ../scss/base-settings/modules/_inline-lists.scss */
-
 .inline-list li:last-child {
-  padding-right: 0;
   margin-right: 0;
 }
 
-/* line 13, ../scss/base-settings/modules/_inline-lists.scss */
+/* line 8, ../scss/base-settings/modules/_inline-lists.scss */
 
-.inline-list li:last-child a {
-  border-right: none;
+.inline-list li:last-child a:after {
+  content: '';
+}
+
+/* line 15, ../scss/base-settings/modules/_inline-lists.scss */
+
+.inline-list a:after {
+  content: '|';
+  color: #c3c3c3;
 }
 
 /* line 19, ../scss/base-settings/modules/_inline-lists.scss */
 
-.inline-list a {
-  padding: 0 0.75rem 0 0.75rem;
-  border-right: 1px solid #c3c3c3;
-}
-
-/* line 22, ../scss/base-settings/modules/_inline-lists.scss */
-
-.inline-list a:first-child {
-  padding-left: 0;
+.inline-list a:after {
+  content: '|';
+  color: #c3c3c3;
+  margin-left: 0.75rem;
 }
 
 /* line 5, ../scss/base-settings/themes/_ui-only.scss */

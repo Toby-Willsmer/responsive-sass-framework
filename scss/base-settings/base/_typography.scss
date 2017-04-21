@@ -67,7 +67,7 @@ p, address {
 // Links
 a {
   display: $in-block;
-  @include font-rhythm($base-font-size, 6, 1);
+  @include font-rhythm($base-font-size, no, 1);
   color: $blue; 
   text-decoration: $no-underline;
   background: transparent;
