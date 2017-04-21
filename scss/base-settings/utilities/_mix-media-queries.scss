@@ -1,9 +1,21 @@
 // Mixin - Media queries
 
-@mixin respond-to($breakpoint,$retina:false,$retina-with-media:false) {
+@mixin respond-to($min-width,$max-width:false,$retina:false,$retina-with-media:false) {
   @if $retina == false {
-    @media only screen and (min-width: $breakpoint) {
+    @if $min-width and $max-width {
+      @media only screen and (min-width: $min-width) and (max-width: $max-width) {
         @content;
+      }
+    }
+    @else if $min-width == 0 and $max-width {
+      @media only screen and (min-width: 0) and (max-width: $max-width) {
+        @content;
+      }
+    }
+    @else if $max-width == false {
+      @media only screen and (min-width: $min-width) {
+        @content;
+      }
     }
   }
   @else if $retina == true {
