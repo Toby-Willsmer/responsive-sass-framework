@@ -20,7 +20,7 @@ Grunt compiles the scss instead of Compass
 
 The grid
 ==============
-The grid is made using flexbox using reusable alignment classes, there is also a simple flexbox model you use for layouts using the ame alignment classes.
+The grid is made using flexbox using reusable alignment classes, there is also a simple flexbox model for layouts using the same alignment classes.
 
 In the SCSS directory
 ==============
