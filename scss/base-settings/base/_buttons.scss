@@ -22,18 +22,12 @@
   &[disabled] {
     cursor: default;
   }
-  &.btn-text {
-    border: none;
-    background: none;
-    color: $blue;
-    padding: 0;
-  }
 }
 
 // Button colours
 
 // blue button
-.btn-blue {
+.button--blue {
   background: $blue;
   &:hover,
   &:focus {
@@ -42,7 +36,7 @@
 }
 
 // green button
-.btn-green {
+.button--green {
   background: $green;
   &:hover,
   &:focus {
@@ -51,7 +45,7 @@
 }
 
 // red button
-.btn-red {
+.button--red {
   background: $red-dark;
   &:hover,
   &:focus {
@@ -60,7 +54,7 @@
 }
 
 // grey button hover state
-.btn-grey {
+.button--grey {
   color: $grey-darker;
   &:hover,
   &:focus {
@@ -69,8 +63,15 @@
   }
 }
 
+.button--text {
+  border: none;
+  background: none;
+  color: $blue;
+  padding: 0;
+}
+
 [disabled],
-.btn-grey {
+.button--grey {
   color: $grey-darker;
   border-color: $grey-dark;
 }
