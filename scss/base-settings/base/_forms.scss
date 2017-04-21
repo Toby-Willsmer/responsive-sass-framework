@@ -1,11 +1,11 @@
 // Forms - these are the base settings for forms any variations are in the /modules dir
 
-form {
-  margin: 0 0 $space-lrg 0;
-}
+// Each input and label is wrapped in a div with the class '.form-item'
+// This is to isolate each form item if needed
 
-form .row {
-  @include form-row-base;
+form {
+  max-width: calc-rem(600); // no one likes a really wide form!
+  margin: 0 0 $space-lrg 0;
 }
 
 fieldset {
@@ -20,8 +20,6 @@ label {
   display: $block;
   font-weight: bold;
   abbr {
-    font-weight: normal;
-    @include font-rhythm(12, 3, 1);
     color: $red-dark;
   }
 }
@@ -43,7 +41,6 @@ input[type="time"],
 input[type="url"],
 textarea {
   width: $full-width;
-  display: $block;
 }
 
 input[type="checkbox"],

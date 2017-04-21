@@ -1,22 +1,5 @@
 // Mixin - forms
 
-// form with rows inside
-@mixin form-row-base {
-  .row { margin: 0 ((-$form-spacing) / 2 );
-    .column,
-    .columns { padding: 0 $form-spacing / 2; }
-    // Use this to collapse the margins of a form row
-    &.collapse { margin: 0;
-      .column,
-      .columns { padding: 0; }
-    }
-  }
-  input.column,
-  input.columns,
-  textarea.column,
-  textarea.columns { padding-#{$left}: $form-spacing / 2; }
-}
-
 @mixin form-general {
   border-radius: $radius/2;
   border: solid 1px $grey-light;

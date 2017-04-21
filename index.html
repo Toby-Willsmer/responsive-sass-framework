@@ -14,35 +14,43 @@
     <![endif]-->
   </head>
   <body>
-    <!--[if lt IE 9]>
-      <div class="not-supported"><p class="icon-attention"> This website is <strong>NOT</strong> fully supported in older versions of Internet Explorer, please download a browser such as Chrome or Firefox.</p>
-      </div>
-    <![endif]-->
+  <!--[if lt IE 9]>
+    <div class="not-supported"><p> This website is <strong>NOT</strong> fully supported in older versions of Internet Explorer, please download a browser such as Chrome or Firefox.</p>
+    </div>
+  <![endif]-->
 
-    <!-- *** THE BELOW IS FOR DISPLAY PURPOSES ONLY, REMMOVE FOR PRODUCTION *** -->
-      <div class="not-supported"><p class="icon-attention"> This website is <strong>NOT</strong> supported in older versions of Internet Explorer and may not display/function correctly.<br/>Please download a FREE modern up to date browser such as Chrome or Firefox.</p>
-      <p><strong>**THIS IS FOR DISPLAY PURPOSES ONLY, REMMOVE FOR PRODUCTION**</strong></p>
-      </div>
-    <!-- *** END ABOVE REMOVE *** -->
+  <!-- *** THE BELOW IS FOR DISPLAY PURPOSES ONLY, REMMOVE FOR PRODUCTION *** -->
+    <div class="not-supported"><p> This website is <strong>NOT</strong> supported in older versions of Internet Explorer and may not display/function correctly.<br/>Please download a FREE modern up to date browser such as Chrome or Firefox.</p>
+    <p><strong>**THIS IS FOR DISPLAY PURPOSES ONLY, REMMOVE FOR PRODUCTION**</strong></p>
+    </div>
+  <!-- *** END ABOVE REMOVE *** -->
 
   <!-- header -->
     <header>
-      <div class="row">
-        <nav class="col" role="navigation">
-          <img class="logo" src="img/web-images/logo.jpg" alt="Logo" />
+      <div class="flex align-left header-maxWidth">
+        <img class="logo" src="img/web-images/logo.jpg" alt="Logo" />
+        <nav class="align-right" role="navigation">
           <ul class="inline-list main-nav" role="menu">
-            <li role="menu-item"><a href="#" title="link">Link 1</a></li>
-            <li role="menu-item"><a href="#" title="link">Link 2</a></li>
-            <li role="menu-item"><a href="#" title="link">Link 3</a></li>
-            <li role="menu-item"><a href="#" title="link">Link 4</a></li>
+            <li role="menu-item">
+              <a href="#" title="link">Link 1</a>
+            </li>
+            <li role="menu-item">
+              <a href="#" title="link">Link 2</a>
+            </li>
+            <li role="menu-item">
+              <a href="#" title="link">Link 3</a>
+            </li>
+            <li role="menu-item">
+              <a href="#" title="link">Link 4</a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
   <!-- main content -->
     <main role="main">
-      <div class="row">
-        <section class="col">
+      <div class="grid grid--gutter grid--maxWidth g-S1 g-M2">
+        <section class="grid__col align-col">
           <h1>H1 heading</h1>
           <h2>H2 heading</h2>
           <h3>H3 heading</h3>
@@ -50,7 +58,7 @@
           <h5>H5 heading</h5>
           <h6>H6 heading</h6>
         </section>
-        <section class="col">
+        <section class="grid__col">
           <h3>Paragraph</h3>
           <article>
             <p>lorem ipsum tasty burger dolor nedsium moreium relish. lorem ipsum tasty burger dolor nedsium moreium relish.lorem ipsum tasty burger dolor nedsium moreium relish.lorem ipsum tasty burger dolor nedsium moreium relish. 
@@ -77,18 +85,17 @@
                 &emsp;&lt;p&gt;This is what code looks like&lt;/p&gt;<br/>
                 &lt;/div&gt;
               </code>
-
             </p>
           </article>
         </section>
       </div>
     <!-- lists -->
       <hr/>
-      <div class="row">
-        <div class="col">
-          <h3>Lists</h3>
-        </div>
-        <section class="s-12 m-6 l-3 col">
+      <div class="site-maxWidth">
+        <h3>Lists</h3>
+      </div>
+      <div class="grid grid--gutter grid--maxWidth g-S1 g-M2">
+        <section class="grid__col align-col">
           <h4>Unordered</h4>
           <ul>
             <li>list item 1</li>
@@ -96,7 +103,7 @@
             <li>list item 3</li>
           </ul>
         </section>
-        <section class="s-12 m-6 l-3 col">
+        <section class="grid__col align-col">
           <h4>Unordered no bullet</h4>
           <ul class="no-bullet">
             <li>list item 1</li>
@@ -104,7 +111,7 @@
             <li>list item 3</li>
           </ul>
         </section>
-        <section class="s-12 m-6 l-3 col">
+        <section class="grid__col align-col">
           <h4>Ordered</h4>
           <ol>
             <li>ordered list 1</li>
@@ -112,7 +119,7 @@
             <li>ordered list 3</li>
           </ol>
         </section>
-        <section class="s-12 m-6 l-3 col">
+        <section class="grid__col align-col">
           <h4>Description</h4>
           <dl>
             <dt>title</dt>
@@ -120,109 +127,101 @@
               <dd>list 1</dd>
           </dl>
         </section>
-        <section class="col">
-          <h4>Inline lists</h4>
-          <ul class="inline-list">
-            <li>Inline 1</li>
-            <li>Inline 2</li>
-            <li>Inline 3</li>
-            <li>Inline 4</li>
-            <li>Inline 5</li>
-          </ul>
-        </section>
-        <section class="col">
-          <ul class="inline-list inline-links">
-            <li><a href="#">Inline link 1</a></li>
-            <li><a href="#">Inline link 2</a></li>
-            <li><a href="#">Inline link 3</a></li>
-            <li><a href="#">Inline link 4</a></li>
-            <li><a href="#">Inline link 5</a></li>
-          </ul>
-        </section>
       </div>
+      <section class="site-maxWidth">
+        <h4>Inline lists</h4>
+        <ul class="inline-list">
+          <li>Inline 1</li>
+          <li>Inline 2</li>
+          <li>Inline 3</li>
+          <li>Inline 4</li>
+          <li>Inline 5</li>
+        </ul>
+        <ul class="inline-list">
+          <li><a href="#">Inline link 1</a></li>
+          <li><a href="#">Inline link 2</a></li>
+          <li><a href="#">Inline link 3</a></li>
+          <li><a href="#">Inline link 4</a></li>
+          <li><a href="#">Inline link 5</a></li>
+        </ul>
+      </section>
     <!-- form -->
       <hr/>
-      <div class="row">
-        <section class="s-12 m-8 l-6 col">
+      <section class="site-maxWidth">
         <h3>Forms</h3>
-          <form>
-            <fieldset>
-              <div class="row">
-                <div class="s-12 m-6 col">
-                  <label>Name <abbr title="Required">*required</abbr></label>
-                  <input type="text" placeholder="Enter name" />
-                </div>
-                <div class="s-12 m-6 col">
-                  <label>Email address <abbr title="Required">*required</abbr></label>
-                  <input type="email" placeholder="name@example.com" />
-                </div>
-                <div class="col">
-                  <label>URL</label>
-                  <input type="url" placeholder="www.example.com" />
-                </div>
-              </div>
-            <!-- options -->
-              <div class="row">
-                <div class="col">
-                  <label>Select</label>
-                  <select>
-                    <option value="option 1">option 1</option>
-                    <option value="option 2">option 2</option>
-                    <option value="option 3">option 3</option>
-                    <option value="option 4">option 4</option>
-                  </select>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <input type="radio" name="radio" value="Red" id="radio1">
-                  <label for="radio1">Radio 1</label>
-                </div>
-                <div class="col">
-                  <input type="radio" name="radio" value="Blue" id="radio2">
-                  <label for="radio2">Radio 2</label>
-                </div>
-                <div class="col">
-                  <input id="checkbox1" type="checkbox">
-                  <label for="checkbox1">Checkbox 1</label>
-                </div>
-                <div class="col">
-                  <input id="checkbox2" type="checkbox">
-                  <label for="checkbox2">Checkbox 2</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="s-12 col">
-                  <label>Message</label>
-                  <textarea placeholder="Type your message here"></textarea>
-                </div>
-              </div>
-            </fieldset>
-            <button class="button btn-green">Submit</button>
-          </form>
+        <p>All fields marked with an <abbr title="Required">*</abbr> are required.</p>
+        <form>
+          <fieldset>
+            <div class="form-item">
+              <label>Name <abbr title="Required">*</abbr></label>
+              <input type="text" placeholder="Enter name" />
+            </div>
+            <div class="form-item">
+              <label>Email address <abbr title="Required">*</abbr></label>
+              <input type="email" placeholder="name@example.com" />
+            </div>
+            <div class="form-item">
+              <label>URL</label>
+              <input type="url" placeholder="www.example.com" />
+            </div>
+          <!-- options -->
+            <div class="form-item">
+              <label>Select</label>
+              <select>
+                <option value="option 1">option 1</option>
+                <option value="option 2">option 2</option>
+                <option value="option 3">option 3</option>
+                <option value="option 4">option 4</option>
+              </select>
+            </div>
+            <div class="form-item">
+              <input id="radio1" type="radio" name="radio" value="Red">
+              <label for="radio1">Radio 1</label>
+            </div>
+            <div class="form-item">
+              <input id="radio2" type="radio" name="radio" value="Blue">
+              <label for="radio2">Radio 2</label>
+            </div>
+            <div class="form-item">
+              <input id="checkbox1" type="checkbox">
+              <label for="checkbox1">Checkbox 1</label>
+            </div>
+            <div class="form-item">
+              <input id="checkbox2" type="checkbox">
+              <label for="checkbox2">Checkbox 2</label>
+            </div>
+            <div class="form-item">
+              <label>Message</label>
+              <textarea placeholder="Type your message here"></textarea>
+            </div>
+          </fieldset>
+          <button class="button btn-green">Submit</button>
+        </form>
       </section>
-    </div>
     <!-- buttons -->
-    <hr/>
-    <div class="row">
-      <section class="s-12 m-6 col">
-        <h3>Buttons</h3>
-        <button href="#" class="button btn-blue">Default button</button><br/>
-        <button href="#" class="button btn-text">Text button</button><br/>
-      </section>
-      <section class="s-12 m-6 col">
-        <h3>Button colours</h3>
-        <button href="#" class="button btn-green">Success button</button><br/>
-        <button href="#" class="button btn-red">Alert button</button><br/>
-        <button href="#" class="button btn-grey">Grey button</button><br/>
-        <button href="#" class="button" disabled>Disabled button</button><br/>
-      </section>
-    </div>
-  <!-- end base elements. -->
-    <hr/>
-  <!-- icon font -->
-    <div class="row">
-      <section class="col">
+      <hr/>
+      <div class="grid grid--gutter grid--maxWidth g-S1">
+        <section class="grid__col">
+          <div class="buttons">
+            <h3>Buttons</h3>
+            <button href="#" class="button button--blue">Default button</button><br/>
+            <button href="#" class="button button--text">Text button</button>
+          </div>
+        </section>
+        <section class="grid__col">
+          <div class="buttons">
+            <h3>Button colours</h3>  
+            <button href="#" class="button button--green">Success button</button><br/>
+            <button href="#" class="button button--red">Alert button</button><br/>
+            <button href="#" class="button button--grey">Grey button</button><br/>
+            <button href="#" class="button" disabled>Disabled button</button>
+          </div>
+        </section>
+      </div>
+    <!-- end base elements. -->
+      <hr/>
+    <!-- icon font -->
+      <section class="site-maxWidth">
         <h3>Handy unicode</h3>
         <p>
           &#x2b; <code>&amp;#x2b;</code> - plus not tested<br/>
@@ -232,162 +231,628 @@
           &#x2715; <code>&amp;#x2715;</code> - cross 92%
         </p>
       </section>
-    </div>
-    <hr/>
-  <!-- colours -->
-    <div class="row">
-      <section class="s-4 m-2 col">
-        <h4>Red</h4>
-        <ul class="no-bullet red">
-          <li class="lightest"></li>
-          <li class="lighter"></li>
-          <li class="light"></li>
-          <li class="base">#cc0000</li>
-          <li class="dark"></li>
-          <li class="darker"></li>
-        </ul>
-      </section>
-      <section class="s-4 m-2 col">
-        <h4>Orange</h4>
-        <ul class="no-bullet orange">
-          <li class="lightest"></li>
-          <li class="lighter"></li>
-          <li class="light"></li>
-          <li class="base">#eb5a0b</li>
-          <li class="dark"></li>
-          <li class="darker"></li>
-        </ul>
-      </section>
-      <section class="s-4 m-2 col">
-        <h4>Yellow</h4>
-        <ul class="no-bullet yellow">
-          <li class="lightest"></li>
-          <li class="lighter"></li>
-          <li class="light"></li>
-          <li class="base">#ffcc00</li>
-          <li class="dark"></li>
-          <li class="darker"></li>
-        </ul>
-      </section>
-      <section class="s-4 m-2 col">
-        <h4>Green</h4>
-        <ul class="no-bullet green">
-          <li class="lightest"></li>
-          <li class="lighter"></li>
-          <li class="light"></li>
-          <li class="base">#57a800</li>
-          <li class="dark"></li>
-          <li class="darker"></li>
-        </ul>
-      </section>
-      <section class="s-4 m-2 col">
-        <h4>Blue</h4>
-        <ul class="no-bullet blue">
-          <li class="lightest"></li>
-          <li class="lighter"></li>
-          <li class="light"></li>
-          <li class="base">#197295</li>
-          <li class="dark"></li>
-          <li class="darker"></li>
-        </ul>
-      </section>
-      <section class="s-4 m-2 col">
-        <h4>Tones</h4>
-        <ul class="no-bullet tones">
-          <li class="lightest"></li>
-          <li class="lighter"></li>
-          <li class="light"></li>
-          <li class="base">#a9a9a9</li>
-          <li class="dark"></li>
-          <li class="darker"></li>
-        </ul>
-      </section>
-    </div>
-    <hr/>
-  <!-- panels -->
-    <div class="row">
-      <div class="col">
-        <div class="panel panel-wide grey">
+      <hr/>
+    <!-- colours -->
+      <div class="grid grid--gutter grid--maxWidth g-S2 g-M3">
+        <section class="grid__col align-col">
+          <h4>Red</h4>
+          <ul class="no-bullet red demo-colours">
+            <li class="lightest"></li>
+            <li class="lighter"></li>
+            <li class="light"></li>
+            <li class="base">#cc0000</li>
+            <li class="dark"></li>
+            <li class="darker"></li>
+          </ul>
+        </section>
+        <section class="grid__col align-col">
+          <h4>Orange</h4>
+          <ul class="no-bullet orange demo-colours">
+            <li class="lightest"></li>
+            <li class="lighter"></li>
+            <li class="light"></li>
+            <li class="base">#eb5a0b</li>
+            <li class="dark"></li>
+            <li class="darker"></li>
+          </ul>
+        </section>
+        <section class="grid__col align-col">
+          <h4>Yellow</h4>
+          <ul class="no-bullet yellow demo-colours">
+            <li class="lightest"></li>
+            <li class="lighter"></li>
+            <li class="light"></li>
+            <li class="base">#ffcc00</li>
+            <li class="dark"></li>
+            <li class="darker"></li>
+          </ul>
+        </section>
+        <section class="grid__col align-col">
+          <h4>Green</h4>
+          <ul class="no-bullet green demo-colours">
+            <li class="lightest"></li>
+            <li class="lighter"></li>
+            <li class="light"></li>
+            <li class="base">#57a800</li>
+            <li class="dark"></li>
+            <li class="darker"></li>
+          </ul>
+        </section>
+        <section class="grid__col align-col">
+          <h4>Blue</h4>
+          <ul class="no-bullet blue demo-colours">
+            <li class="lightest"></li>
+            <li class="lighter"></li>
+            <li class="light"></li>
+            <li class="base">#197295</li>
+            <li class="dark"></li>
+            <li class="darker"></li>
+          </ul>
+        </section>
+        <section class="grid__col align-col">
+          <h4>Tones</h4>
+          <ul class="no-bullet tones demo-colours">
+            <li class="lightest"></li>
+            <li class="lighter"></li>
+            <li class="light"></li>
+            <li class="base">#a9a9a9</li>
+            <li class="dark"></li>
+            <li class="darker"></li>
+          </ul>
+        </section>
+      </div>
+      <hr/>
+    <!-- panels -->
+      <div class="panel grey">
+        <div class="panel-maxWidth">
           <p><strong>Panel full width</strong> - lorem ipsum tasty burger dolor nedsium moreium relish. lorem ipsum tasty burger dolor nedsium moreium relish.</p>
         </div>
       </div>
-      <div class="m-6 col">
-        <div class="panel panel-borders grey">
-          <p><strong>Panel with grey border</strong> - lorem ipsum tasty burger dolor nedsium moreium relish. lorem ipsum tasty burger dolor nedsium moreium relish.</p>
-        </div>
+      <div class="panel panel--borders panel--maxWidth grey">
+        <p><strong>Panel with grey border</strong> - lorem ipsum tasty burger dolor nedsium moreium relish. lorem ipsum tasty burger dolor nedsium moreium relish.</p>
       </div>
-      <div class="m-6 col">
-        <div class="panel panel-borders red">
-          <p><strong>Panel with red border</strong> - lorem ipsum tasty burger dolor nedsium moreium relish. lorem ipsum tasty burger dolor nedsium moreium relish.</p>
-        </div>
+      <div class="panel panel--borders panel--maxWidth red">
+        <p><strong>Panel with red border</strong> - lorem ipsum tasty burger dolor nedsium moreium relish. lorem ipsum tasty burger dolor nedsium moreium relish.</p>
       </div>
-      <div class="m-6 col">
-        <div class="panel panel-borders yellow">
-          <p><strong>Panel with yellow border</strong> - lorem ipsum tasty burger dolor nedsium moreium relish. lorem ipsum tasty burger dolor nedsium moreium relish.</p>
-        </div>
+      <div class="panel panel--borders panel--maxWidth yellow">
+        <p><strong>Panel with yellow border</strong> - lorem ipsum tasty burger dolor nedsium moreium relish. lorem ipsum tasty burger dolor nedsium moreium relish.</p>
       </div>
-      <div class="m-6 col">
-        <div class="panel panel-borders green">
-          <p><strong>Panel with green border</strong> - lorem ipsum tasty burger dolor nedsium moreium relish. lorem ipsum tasty burger dolor nedsium moreium relish.</p>
-        </div>
+      <div class="panel panel--borders panel--maxWidth green">
+        <p><strong>Panel with green border</strong> - lorem ipsum tasty burger dolor nedsium moreium relish. lorem ipsum tasty burger dolor nedsium moreium relish.</p>
       </div>
-    </div>
-
-    <hr/>
-  <!-- grid -->
-  <!-- 1 -->
-    <div class="row">
-      <div class="col">
-      <h3>Grid layout</h3>
-        <div class="panel grey"></div>
+      <hr/>
+    <!-- grid -->
+      <!-- Full width grid -->
+      <div class="site-maxWidth">
+        <h2>Full width grid with no gutters</h2>
       </div>
-    </div>
-  <!-- 2 -->
-    <div class="row">
-      <div class="s-6 col">
-        <div class="panel grey"></div>
-      </div>
-      <div class="s-6 col">
-        <div class="panel grey"></div>
-      </div>
-    </div>
-  <!-- 3 -->
-    <div class="row">
-      <div class="s-4 col">
-        <div class="panel grey"></div>
-      </div>
-      <div class="s-8 col">
-        <div class="panel grey"></div>
-      </div>
-    </div>
-  <!-- 4 -->
-    <div class="row">
-      <div class="s-3 col">
-        <div class="panel grey"></div>
-      </div>
-      <div class="s-9 col">
-        <div class="panel grey"></div>
-      </div>
-    </div>
-  <!-- 6 -->
-    <div class="row">
-      <div class="s-2 col">
-        <div class="panel grey"></div>
-      </div>
-      <div class="s-10 col">
-        <div class="panel grey"></div>
-      </div>
-    </div>
-    <!-- 2 collased padding-->
-      <div class="row collapse">
-        <div class="s-12 m-6 col">
-          <div class="panel grey">
-            <p>add collapse class on row</p>
+      <div class="grid grid--wide g-S1 demo-margin">
+        <div class="grid__col demo-blue-1">
+          <div class="demo-content">
+            <p>Small 1 across</p>
           </div>
         </div>
-        <div class="s-12 m-6 col">
-          <div class="panel grey">
-            <p>add collapse class on row</p>
+        <div class="grid__col demo-blue-2">
+          <div class="demo-content">
+            <p>Small 1 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-blue-3">
+          <div class="demo-content">
+            <p>Small 1 across</p>
+          </div>
+        </div>
+      </div>
+      <!-- Restricted width default centered grid -->
+      <div class="site-maxWidth">
+        <h2>Restricted width grid with gutters</h2>
+      </div>
+      <div class="grid grid--gutter grid--maxWidth g-S1">
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>Small 1 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>Small 1 across</p>
+          </div>
+        </div>
+      </div>
+      <!-- Equal width grid -->
+      <div class="site-maxWidth">
+        <h2>Equal width grid</h2>
+      </div>
+      <div class="grid grid--gutter grid--maxWidth">
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Full width - No specified grid sizes</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid--gutter grid--maxWidth">
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>2 across - No specified grid sizes</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>2 across - No specified grid sizes</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid--gutter grid--maxWidth g-S1 g-M2">
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 2 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 2 across</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid--gutter grid--maxWidth g-S1 g-M2">
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 2 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 2 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 2 across</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid--gutter grid--maxWidth g-S1 g-M2">
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 2 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 2 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 2 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 2 across</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid--gutter grid--maxWidth g-S1 g-M3">
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 3 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 3 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 3 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 3 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 3 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>Small 1 across<br/>Medium 3 across</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid--gutter grid--maxWidth g-S2 g-M4">
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 2 across<br/>Medium 4 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 2 across<br/>Medium 4 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 2 across<br/>Medium 4 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 2 across<br/>Medium 4 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 2 across<br/>Medium 4 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 2 across<br/>Medium 4 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 2 across<br/>Medium 4 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 2 across<br/>Medium 4 across</p>
+          </div>
+        </div>
+      </div>
+      <!-- Individual widths -->
+      <div class="site-maxWidth">
+        <h2>Individual widths</h2>
+        <p>The cells that have <code>auto</code> in them are the default flex width. The individual widths have classes added to the <code>grid__col</code> child</p>
+      </div>
+      <div class="grid grid--gutter grid--maxWidth g-S1">
+        <div class="grid__col grid__col--1of2 demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>grid__col--1of2</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>auto</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>auto</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid--gutter grid--maxWidth g-S1">
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>auto</p>
+          </div>
+        </div>
+        <div class="grid__col grid__col--1of3 demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>grid__col--1of3</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid--gutter grid--maxWidth g-S1">
+        <div class="grid__col grid__col--1of4 demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>grid__col--1of4</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>auto</p>
+          </div>
+        </div>
+        <div class="grid__col grid__col--1of3 demo-bg">
+          <div class="demo-content">
+            <p>Small 1 across<br/>grid__col--1of3</p>
+          </div>
+        </div>
+      </div>
+      <!-- Restricted width grid with nested grids -->
+      <div class="site-maxWidth">
+        <h2>Nested grids</h2>
+        <p>Restricted width grid with nested grids</p>
+      </div>
+      <div class="grid grid--gutter grid--maxWidth">
+        <div class="grid__col demo-bg">
+          <!-- Nested grid -->
+          <div class="grid g-S1">
+            <div class="grid__col demo-blue-1">
+              <div class="demo-content">
+                <p>nested grid no gutter<br/>Small 1 across</p>
+              </div>
+            </div>
+            <div class="grid__col demo-blue-2">
+              <div class="demo-content">
+                <p>nested grid no gutter<br/>Small 1 across</p>
+              </div>
+            </div>
+            <div class="grid__col demo-blue-3">
+              <div class="demo-content">
+                <p>nested grid no gutter<br/>Small 1 across</p>
+              </div>
+            </div>
+          </div><!-- Close nested grid -->
+        </div>
+      </div>
+      <div class="grid grid--gutter grid--maxWidth">
+        <div class="grid__col demo-bg">
+          <!-- Nested grid -->
+          <div class="grid grid--gutter g-S1">
+            <div class="grid__col demo-blue-1">
+              <div class="demo-content">
+                <p>nested grid &amp; gutter<br/>Small 1 across</p>
+              </div>
+            </div>
+            <div class="grid__col demo-blue-2">
+              <div class="demo-content">
+                <p>nested grid &amp; gutter<br/>Small 1 across</p>
+              </div>
+            </div>
+            <div class="grid__col demo-blue-1">
+              <!-- Nested grid -->
+              <div class="grid grid--gutter">
+                <div class="grid__col demo-bg-2">
+                  <div class="demo-content">
+                    <p>nested grid<br/>&amp; gutter</p>
+                  </div>
+                </div>
+                <div class="grid__col demo-bg-2">
+                  <div class="demo-content">
+                    <p>nested grid<br/>&amp; gutter</p>
+                  </div>
+                </div>
+              </div><!-- Close nested grid -->
+            </div>
+          </div><!-- Close nested grid -->
+        </div>
+      </div>
+      <!-- Full width grid with nested grids -->
+      <div class="site-maxWidth">
+        <p>Full width grid with nested grids</p>
+      </div>
+      <div class="grid grid--wide g-S1">
+        <div class="grid__col demo-blue-1">
+          <div class="demo-content">
+            <p>Full width grid no gutters<br/>Small 1 across<br/>Medium 2 across</p>
+          </div>
+        </div>
+        <div class="grid__col demo-blue-2">
+          <!-- Nested grid -->
+          <div class="grid g-S1 g-M2">
+            <div class="grid__col demo-bg">
+              <div class="demo-content">
+                <p>nested grid no gutter<br/>Small 1 across<br/>Medium 2 across</p>
+              </div>
+            </div>
+            <div class="grid__col demo-bg-2">
+              <div class="demo-content">
+                <p>nested grid no gutter<br/>Small 1 across<br/>Medium 2 across</p>
+              </div>
+            </div>
+            <div class="grid__col demo-bg">
+              <div class="demo-content">
+                <p>nested grid no gutter<br/>Small 1 across<br/>Medium 2 across</p>
+              </div>
+            </div>
+          </div><!-- Close nested grid -->
+        </div>
+      </div>
+      <div class="grid grid--wide g-S1 demo-margin">
+        <div class="grid__col demo-blue-3">
+          <!-- Nested grid -->
+          <div class="grid grid--gutter g-S1 g-M2">
+            <div class="grid__col demo-blue-1">
+              <div class="demo-content">
+                <p>nested grid &amp; gutter<br/>Small 1 across<br/>Medium 2 across</p>
+              </div>
+            </div>
+            <div class="grid__col demo-blue-2">
+              <div class="demo-content">
+                <p>nested grid &amp; gutter<br/>Small 1 across<br/>Medium 2 across</p>
+              </div>
+            </div>
+            <div class="grid__col demo-blue-1">
+              <!-- Nested grid -->
+              <div class="grid grid--gutter">
+                <div class="grid__col demo-bg-2">
+                  <div class="demo-content">
+                    <p>nested grid<br/>&amp; gutter</p>
+                  </div>
+                </div>
+                <div class="grid__col demo-bg-2">
+                  <div class="demo-content">
+                    <p>nested grid<br/>&amp; gutter</p>
+                  </div>
+                </div>
+              </div><!-- Close nested grid -->
+            </div>
+          </div><!-- Close nested grid -->
+        </div>
+      </div>
+      <!-- List as grid -->
+      <div class="site-maxWidth">
+        <h2>List as grid</h2>
+        <p>List as a restricted width grid</p>
+      </div>
+      <ul class="grid grid--gutter grid--maxWidth g-S1">
+        <li class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>List item<br/>Small 1 across</p>
+          </div>
+        </li>
+        <li class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>List item<br/>Small 1 across</p>
+          </div>
+        </li>
+        <li class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>List item<br/>Small 1 across</p>
+          </div>
+        </li>
+        <li class="grid__col demo-bg-2">
+          <div class="demo-content">
+            <p>List item<br/>Small 1 across</p>
+          </div>
+        </li>
+      </ul>
+      <div class="grid grid--gutter grid--maxWidth">
+        <div class="grid__col align-col">
+          <p>List as a full width grid</p>
+        </div>
+      </div>
+      <ul class="grid grid--wide g-S1">
+        <li class="grid__col demo-blue-1">
+          <div class="demo-content">
+            <p>List item<br/>Small 1 across</p>
+          </div>
+        </li>
+        <li class="grid__col demo-blue-2">
+          <div class="demo-content">
+            <p>List item<br/>Small 1 across</p>
+          </div>
+        </li>
+        <li class="grid__col demo-blue-1">
+          <div class="demo-content">
+            <p>List item<br/>Small 1 across</p>
+          </div>
+        </li>
+        <li class="grid__col demo-blue-2">
+          <div class="demo-content">
+            <p>List item<br/>Small 1 across</p>
+          </div>
+        </li>
+      </ul>
+      <!-- Grid with alignments -->
+      <div class="site-maxWidth">
+        <h2>Grid with alignments</h2>
+        <p>Vertical aligment class <code>align-vert</code> added to the parent <code>grid</code> container.</p>
+      </div>
+      <div class="grid grid--gutter grid--maxWidth align-vert">
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Vertical align</p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Pastrami flank kielbasa doner frankfurter. Pastrami pork boudin, strip steak sausage pig ham pork chop.
+            </p>
+          </div>
+        </div>
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Pastrami flank kielbasa doner frankfurter. Pastrami pork boudin, strip steak sausage pig ham pork chop. Ribeye strip steak pork filet mignon, hamburger turducken shoulder jerky corned beef.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Top - Center - Bottom alignment -->
+      <div class="site-maxWidth">
+        <h2>Top - Center - Bottom align</h2>
+        <p>Alignment classes <code>align-top, align-vert &amp; align-bottom</code> added to the child <code>grid__col</code> container.</p>
+      </div>
+      <div class="grid grid--gutter grid--maxWidth demo-height">
+        <div class="grid__col align-bottom">
+          <div class="demo-content demo-bg">
+            <p>Bottom align</p>
+          </div>
+        </div>
+        <div class="grid__col align-vert">
+          <div class="demo-content demo-bg">
+            <p>Vertical align</p>
+          </div>
+        </div>
+        <div class="grid__col align-top">
+          <div class="demo-content demo-bg">
+            <p>Top align</p>
+          </div>
+        </div>
+      </div>
+      <!-- Content alignment - Left - Center - Right - Vertical alignment -->
+      <div class="site-maxWidth">
+        <h2>Content alignment, Left - Center - Right - Vertical align</h2>
+        <p>Alignment classes added to the child <code>grid__col</code> containers.</p>
+      </div>
+      <div class="grid grid--gutter grid--maxWidth">
+        <div class="grid__col demo-bg">
+          <div class="demo-content">
+            <p>Left align (Default)</p>
+          </div>
+        </div>
+        <div class="grid__col align-center demo-bg">
+          <div class="demo-content">
+            <p>Center align</p>
+          </div>
+        </div>
+        <div class="grid__col align-right demo-bg">
+          <div class="demo-content">
+            <p>Right align</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid--gutter grid--maxWidth">
+        <div class="grid__col align-vert demo-bg demo-height">
+          <div class="demo-content">
+            <p>Align vert on child</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid--gutter grid--maxWidth">
+        <div class="grid__col align-vert align-center demo-bg demo-height">
+          <div class="demo-content">
+            <p>Align vert &amp; center on child</p>
+          </div>
+        </div>
+      </div>
+      <!-- Flex model -->
+      <div class="site-maxWidth">
+        <h2>Flex model</h2>
+        <p>This flexbox model uses the same alignment classes as the grid. The wrapper for the content has the <code>flex</code> class</p>
+        <div class="flex">
+          <p class="demo-content demo-bg">Left align (Default)</p>
+        </div>
+        <div class="flex align-center">
+          <p class="demo-content demo-bg">Center align</p>
+        </div>
+        <div class="flex align-right demo-margin">
+          <p class="demo-content demo-bg">Right align</p>
+        </div>
+        <div class="flex align-vert demo-bg demo-content demo-height demo-margin">
+          <p>Align vert on parent</p>
+        </div>
+        <div class="flex align-center align-vert demo-bg demo-content demo-height demo-margin">
+          <p>Align center and align vert on parent</p>
+        </div>
+        <div class="flex align-col demo-bg demo-content demo-margin">
+          <p>Align columns on parent</p>
+          <p>Align columns on parent</p>
+        </div>
+        <div class="flex demo-margin">
+          <div class="demo-content demo-bg align-top">
+            <p>Align top on child</p>
+          </div>
+          <div class="demo-content demo-bg" style="max-width:200px"><!-- Inline style only for example purposes -->
+            <p>Pastrami flank kielbasa doner frankfurter. Pastrami pork boudin, strip steak sausage pig ham pork chop. Ribvye strip.</p>
+          </div>
+          <div class="align-bottom demo-content demo-bg">
+            <p>Align bottom on child</p>
           </div>
         </div>
       </div>
@@ -395,20 +860,24 @@
     </main>
   <!-- footer -->
     <footer>
-      <div class="row">
-        <div class="col">
-          <p>Footer content goes in here</p>
-        </div>
-        <div class="col footer-copyright">
-          <ul class="inline-list">
-            <li><a href="#">Inline link 1</a></li>
-            <li><a href="#">Inline link 2</a></li>
-            <li><a href="#">Inline link 3</a></li>
-            <li><a href="#">Inline link 4</a></li>
-          </ul>
-          <small>Copyright &copy; 2000 - <?php echo date("Y") ?><!-- this page will need to be php for this to work -->
-          </small>
-        </div>
+      <div class="footer-maxWidth footer-copyright">
+        <p>Footer content goes in here</p>
+        <ul class="inline-list">
+          <li>
+            <a href="#">Inline link 1</a>
+          </li>
+          <li>
+            <a href="#">Inline link 2</a>
+          </li>
+          <li>
+            <a href="#">Inline link 3</a>
+          </li>
+          <li>
+            <a href="#">Inline link 4</a>
+          </li>
+        </ul>
+        <small>Copyright &copy; 2000 - <?php echo date("Y") ?><!-- this page will need to be php for this to work -->
+        </small>
       </div>
     </footer>
 <!-- js scripts -->

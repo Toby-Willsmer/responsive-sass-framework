@@ -4,7 +4,18 @@
 
 hr { margin: 0 0 1rem 0; }
 
-.tones, .red, .orange, .yellow, .green, .blue {
+.demo-height  { height: 200px; }
+.demo-content { padding: 1em; } // same as the grid gutter
+.demo-margin  { margin-bottom: 1em; } // same as the grid gutter
+
+.demo-bg      { background: #ccc; }
+.demo-bg-2    { background: #e4dede; }
+.demo-blue-1  { background: #c2dbe0; }
+.demo-blue-2  { background: #b2c9ce; }
+.demo-blue-3  { background: #a0b6bb; }
+.demo-blue-4  { background: #8ba5ab; }
+
+.demo-colours {
   li {
     padding: 0.5rem;
     color: white;

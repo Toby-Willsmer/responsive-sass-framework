@@ -1,12 +1,13 @@
 // Variables - not specific to anything
 
-$hundred:         100%;
-$full-width:      $hundred;
-$full-height:     $hundred;
+$hundred:          100%;
+$full-width:       $hundred;
+$full-height:      $hundred;
+$site-width:       1300px; // the default width for the site used in layouts/_grid.scss
 
 // directions
-$left:            left;
-$right:           right;
+$left:             left;
+$right:            right;
 
 // Timings - mostly used in trasitions
 $ease: ease;

@@ -7,10 +7,9 @@
 // Compass
 @import "compass";
 
-// functions
+// Functions
 @import "utilities/func-converstions",
-        "utilities/func-calculations",
-        "utilities/func-grid";
+        "utilities/func-calculations";
 
 // Variables
 @import "utilities/var-colours",
@@ -19,7 +18,7 @@
         "utilities/var-common",
         "utilities/var-forms";
 
-// mixins
+// Mixins
 @import "utilities/mix-animation",
         "utilities/mix-forms",
         "utilities/mix-general",

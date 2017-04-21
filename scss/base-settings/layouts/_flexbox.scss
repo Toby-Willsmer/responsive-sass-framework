@@ -1,0 +1,55 @@
+// Flexbox model
+
+// This extend should only be used in the this file and the _grid.scss one.
+// There are the modular flex classes stopping bloat from the repeated rules/prefixes.
+
+// Done as an extend as I wanted to keep the naming conventions seperate for the grid and flex models
+%flex {
+  display: flex;
+  flex-wrap: wrap; // needed to make sure we get cross browser consistancy
+  position: relative;
+  & *:not(.grid--gutter) { // this is specifically for IE10 not doing the wrapping of content
+    max-width: $full-width;
+  }
+}
+
+// Flex classes
+.flex {
+  @extend %flex;
+}
+
+// Alignments
+.align-top {
+  align-self: flex-start;
+}
+
+.align-bottom {
+  align-self: flex-end;
+}
+
+.align-vert {
+  align-items: center;
+  &.align-center {
+    align-content: center;
+  }
+}
+
+.align-right {
+  justify-content: flex-end;
+}
+
+.align-center {
+  justify-content: center;
+}
+
+// Mostly default is left but here if ever needed
+// .align-left {
+//   justify-content: flex-start;
+// }
+
+// you'll need to set a height on the parent when you use this for IE 10 / 11
+// Microsoft are not going to fix this in anything under Edge
+// https://connect.microsoft.com/IE/feedback/details/802625/min-height-and-flexbox-flex-direction-column-dont-work-together-in-ie-10-11-preview
+.align-col {
+  flex-direction: column;
+}

@@ -1,152 +1,166 @@
-// Grid - uses flexbox
+// Grid
 
-// **** remove the below once flex grid is done **** //
+// As there is a max-width delcared for the restricted site width
+// we use margin to center .grid as we don't want a main flex wrapper for centering.
+// We do this so that we can have resticted and full width grids anywhwere on the page
+// without the need of hacks to make the full width one.
 
-// ------ variables ------ //
-$row-width: 1240px !default; // 1440px // forces max-width use rem-calc(1000) - or 100% for full screen width
-$column-gutter: 1rem !default;
-$total-columns: 12 !default;
+// Variables grid specific
+$grid-gutter: 1em;
 
-// Media Query Ranges
-$small-range: (0em, 40em); // 0, 640px
-$medium-range: (40.063em, 64em); // 641px, 1024px
-$large-range: (64.063em, 90em); // 1025px, 1440px
-// $xlarge-range: (90.063em, 120em); // 1441px, 1920px
-// $xxlarge-range: (120.063em); // 1921px
-
-$screen: "only screen" !default;
-
-$small-up: $screen !default;
-$small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})" !default;
-
-$medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})" !default;
-$medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})" !default;
-
-$large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})" !default;
-$large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})" !default;
-
-// $xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})" !default;
-// $xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})" !default;
-
-// $xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})" !default;
-// $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})" !default;
-
-$text-direction: ltr !default;
-$default-float: left !default;
-$opposite-direction: right !default;
-
-@if $text-direction == ltr {
-  $default-float: left;
-  $opposite-direction: right;
-} @else {
-  $default-float: right;
-  $opposite-direction: left;
+// add the flex. We want it to be on the cols as well as the container so done this way.
+[class^="grid"] {
+  @extend %flex; // This extend is in the _flexbox.scss file
 }
 
-// ------ Grid Functions ------ //
-
-@function grid-calc($colNumber, $totalColumns) {
-  @return percentage(($colNumber / $totalColumns));
+// Done this way so it can be prefixed with anything for other modular classes
+[class*="-maxWidth"] {
+  max-width: $site-width;
+  margin: 0 auto 0; // we declare the bottom as zero here to cater for when .grid is on a ul
+  &:not(.grid) {
+    padding-left: $grid-gutter;
+    padding-right: $grid-gutter;
+  }
 }
 
-// ------ Mixins ------ //
-// For creating container, nested, and collapsed rows.
-// Default: false. Options: nest, collapse, nest-collapse, false.
-// use @include grid-row(abover-options);
-@mixin grid-row($behavior: false) {
-  @if $behavior == nest {
-    width: auto;
-    margin-#{$default-float}: -($column-gutter/2);
-    margin-#{$opposite-direction}: -($column-gutter/2);
-    margin-top: 0;
+// the main grid settings
+.grid {
+  list-style: none; // for when a list is a grid
+  width: $full-width;
+
+  * :last-child { // ********** original
     margin-bottom: 0;
-    max-width: none;
   }
-  @else if $behavior == collapse {
-    width: 100%;
-    margin: 0;
-    max-width: $row-width;
-  }
-  @else if $behavior == nest-collapse {
-    width: auto;
-    margin: 0;
-    max-width: none;
-  }
-  @else {
-    width: 100%;
-    margin-#{$default-float}: auto;
-    margin-#{$opposite-direction}: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-    max-width: $row-width;
-  }
-  @include clearfix();
+
+  // * :last-child &:not(.grid__col) { // ********** extra for the nested collapse thing
+  //   margin-bottom: 0;
+  // }
+
 }
 
-// ----- Creates column ------ // 
-// should be used inside of a media query to control layouts
-// $columns - The number of columns this should be
-// $last-column - Is this the last column? Default: false.
-// $collapse - Get rid of gutter padding on column? Default: false.
-// $float - Should this float? Default: true. Options: true, false, left, right.
-@mixin grid-column(
-  $columns:false,
-  $last-column:false,
-  $collapse:false,
-  $float:true) {
-  // If collapsed, get rid of gutter padding
-  @if $collapse {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  // Gutter padding whenever a column isn't set to collapse
-  // (use $collapse:null to do nothing)
-  @else if $collapse == false {
-    padding-left: $column-gutter / 2;
-    padding-right: $column-gutter / 2;
-  }
-  // If a column number is given, calculate width
-  @if $columns {
-    width: grid-calc($columns, $total-columns);
-    // If last column, float naturally instead of to the right
-    @if $last-column { float: $opposite-direction; }
-  }
-  @if $float {
-    @if $float == left or $float == true { float: $default-float; }
-    @else if $float == right { float: $opposite-direction; }
-    @else { float: none; }
+// set the columns
+.grid__col {
+  flex: 1;
+}
+
+// add some gutters to the grid and cater for nested grids
+// the grid with gutters is the width restricted one
+.grid--gutter {
+  padding-left: $grid-gutter;
+  > .grid__col {
+    margin: 0 $grid-gutter $grid-gutter 0;
+    .grid {
+      @extend %nested-grid;
+    }
   }
 }
 
-// ------ Create presentational classes for grid ------ //
-// $size - Name of class .l-1, .l-2, etc.
-@mixin grid-html-classes($size) {
-  @for $i from 1 through $total-columns {
-    .#{$size}#{-$i} { @include grid-column($columns:$i,$collapse:null,$float:false); }
+// make the grid full width and cater for any nested grid when wide
+.grid--wide {
+  > .grid--gutter {
+    margin-top: $grid-gutter;
   }
-  [class*="col"] + [class*="col"]:last-child { float: $opposite-direction; }
-  [class*="col"] + [class*="col"].end { float: $default-float; }
-}
-
-// ------ Prints grid ------ //
-.row {
-  @include grid-row;
-  &.collapse {
-     > .col { @include grid-column($collapse:true); }
-    .row {margin-left:0; margin-right:0;}
-  }
-  .row { @include grid-row($behavior:nest);
-    &.collapse { @include grid-row($behavior:nest-collapse); }
+  .grid {
+    @extend %nested-grid;
   }
 }
 
-.col {
-  @include grid-column($columns:$total-columns);
-  position: relative;
+%nested-grid {
+
+  padding-top: $grid-gutter; // ********** original
+
+  // padding-left: 0; // ********** extra for the nested collapse thing
+
+  &:not(.grid--gutter) {
+    padding-top: 0;
+  }
+
+
+  // .grid__col { // ********** extra for the nested collapse thing
+  //   margin-bottom: 0;
+  //   &:last-of-type {
+  //     margin-right: 0;
+  //   }
+  // }
+
+
 }
 
-@media #{$small-up}  { @include grid-html-classes($size:s); }
-@media #{$medium-up} { @include grid-html-classes($size:m); }
-@media #{$large-up}  { @include grid-html-classes($size:l); }
-// @media #{$xlarge-up} { @include grid-html-classes($size:xl); }
-// @media #{$xxlarge-up} { @include grid-html-classes($size:xxl); }
+// clear the list default when a wide grid is used
+ul.grid--wide {
+  padding-left: 0
+}
+
+// Grid widths
+// We do all 12 but we don't neccassarly have to use them!
+// Number denotes the amount across NOT the grid value.
+// These are for when we have a grid with a gutter.
+$w-1:   calc(#{$hundred} - #{$grid-gutter});
+$w-2:   calc(#{$hundred} / 2 - #{$grid-gutter});
+$w-3:   calc(#{$hundred} / 3 - #{$grid-gutter});
+$w-4:   calc(#{$hundred} / 4 - #{$grid-gutter});
+$w-5:   calc(#{$hundred} / 5 - #{$grid-gutter});
+$w-6:   calc(#{$hundred} / 6 - #{$grid-gutter});
+$w-7:   calc(#{$hundred} / 7 - #{$grid-gutter});
+$w-8:   calc(#{$hundred} / 8 - #{$grid-gutter});
+$w-9:   calc(#{$hundred} / 9 - #{$grid-gutter});
+$w-10:  calc(#{$hundred} / 10 - #{$grid-gutter});
+$w-11:  calc(#{$hundred} / 11 - #{$grid-gutter});
+$w-12:  calc(#{$hundred} / 12 - #{$grid-gutter});
+
+// Small
+@include respond-to(0, $small) {
+  .g-S1 > .grid__col { flex: 1 0 $hundred; }
+  .g-S2 > .grid__col { flex: 1 0 $hundred/2; }
+  .g-S3 > .grid__col { flex: 1 0 $hundred/3; }
+
+  .grid--gutter {
+    &.g-S1 > .grid__col { flex: 1 0 $w-1; }
+    &.g-S2 > .grid__col { flex: 1 0 $w-2; }
+    &.g-S3 > .grid__col { flex: 1 0 $w-3; }
+  }
+}
+
+// Medium
+@include respond-to($small, $medium) {
+  .g-M2 > .grid__col { flex: 1 0 $hundred/2; }
+  .g-M3 > .grid__col { flex: 1 0 $hundred/3; }
+  .g-M4 > .grid__col { flex: 1 0 $hundred/4; }
+
+  .grid--gutter {
+    &.g-M2 > .grid__col { flex: 1 0 $w-2; }
+    &.g-M3 > .grid__col { flex: 1 0 $w-3; }
+    &.g-M4 > .grid__col { flex: 1 0 $w-4; }
+  }
+}
+
+// Large
+// The default is flex: 1; for grid__col so you don't actually need to specify these classes 
+// unless you want to restrict the width of a cell
+@include respond-to($large) {
+  .g-L2 > .grid__col { flex: 1 0 $hundred/2; }
+  .g-L3 > .grid__col { flex: 1 0 $hundred/3; }
+  .g-L4 > .grid__col { flex: 1 0 $hundred/4; }
+  .g-L6 > .grid__col { flex: 1 0 $hundred/6; }
+
+  .grid--gutter {
+    &.g-L2 > .grid__col { flex: 1 0 $w-2; }
+    &.g-L3 > .grid__col { flex: 1 0 $w-3; }
+    &.g-L4 > .grid__col { flex: 1 0 $w-4; }
+    &.g-L6 > .grid__col { flex: 1 0 $w-6; }
+  } 
+}
+
+// For the individual sizes
+// we only do thirds, quarters and halves as they are the most common sizes used
+@include respond-to($small) {
+  .grid__col--1of2 { flex: 1 0 $hundred/2; }
+  .grid__col--1of3 { flex: 1 0 $hundred/3; }
+  .grid__col--1of4 { flex: 1 0 $hundred/4; }
+
+  .grid--gutter {
+    .grid__col--1of2 { flex: 1 0 $w-2; }
+    .grid__col--1of3 { flex: 1 0 $w-3; }
+    .grid__col--1of4 { flex: 1 0 $w-4; }
+  }
+}

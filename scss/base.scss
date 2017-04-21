@@ -21,7 +21,8 @@
         "base/forms";
 
 // Layout dependancies
-@import "layouts/grid",
+@import "layouts/flexbox",
+        "layouts/grid",
         "layouts/header",
         "layouts/navigation",
         "layouts/footer";
