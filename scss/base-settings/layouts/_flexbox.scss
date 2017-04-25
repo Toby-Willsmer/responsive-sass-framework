@@ -43,9 +43,9 @@
 }
 
 // Mostly default is left but here if ever needed
-// .align-left {
-//   justify-content: flex-start;
-// }
+.align-left {
+  justify-content: flex-start;
+}
 
 // you'll need to set a height on the parent when you use this for IE 10 / 11
 // Microsoft are not going to fix this in anything under Edge

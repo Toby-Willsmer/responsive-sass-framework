@@ -351,7 +351,7 @@ html {
 /* line 14, ../scss/base-settings/base/_base-global.scss */
 
 body {
-  background: #fff;
+  background: white;
   color: #333;
   position: relative;
   margin: 0;
@@ -363,7 +363,7 @@ body {
 
 main,
 footer {
-  padding-top: 24px;
+  padding-top: 1.5rem;
 }
 
 /* line 29, ../scss/base-settings/base/_base-global.scss */
@@ -386,8 +386,8 @@ img {
 
 .not-supported {
   width: 100%;
-  padding: 20px;
-  color: #000;
+  padding: 1.25rem;
+  color: black;
   text-align: center;
   background: #ffecb3;
   border-bottom: solid 1px #664d00;
@@ -397,26 +397,6 @@ img {
 
 .not-supported p {
   margin-bottom: 0;
-}
-
-/* line 50, ../scss/base-settings/base/_base-global.scss */
-
-.clearfix {
-  *zoom: 1;
-}
-
-/* line 6, ../scss/base-settings/utilities/_mix-general.scss */
-
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: block;
-}
-
-/* line 10, ../scss/base-settings/utilities/_mix-general.scss */
-
-.clearfix:after {
-  clear: both;
 }
 
 /* line 21, ../scss/base-settings/base/_typography.scss */
@@ -749,9 +729,9 @@ fieldset {
 /* line 17, ../scss/base-settings/base/_forms.scss */
 
 label {
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   line-height: 1;
-  margin-bottom: 0.1875rem;
+  margin-bottom: 0.375rem;
   color: #505050;
   display: block;
   font-weight: bold;
@@ -940,6 +920,15 @@ select + option:focus {
   justify-content: center;
 }
 
+/* line 46, ../scss/base-settings/layouts/_flexbox.scss */
+
+.align-left {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
 /* line 53, ../scss/base-settings/layouts/_flexbox.scss */
 
 .align-col {
@@ -950,34 +939,34 @@ select + option:focus {
   flex-direction: column;
 }
 
-/* line 17, ../scss/base-settings/layouts/_grid.scss */
+/* line 9, ../scss/base-settings/layouts/_grid.scss */
 
 [class*="-maxWidth"] {
   max-width: 1300px;
   margin: 0 auto 0;
 }
 
-/* line 20, ../scss/base-settings/layouts/_grid.scss */
+/* line 12, ../scss/base-settings/layouts/_grid.scss */
 
 [class*="-maxWidth"]:not(.grid) {
   padding-left: 1em;
   padding-right: 1em;
 }
 
-/* line 27, ../scss/base-settings/layouts/_grid.scss */
+/* line 24, ../scss/base-settings/layouts/_grid.scss */
 
 .grid {
   list-style: none;
   width: 100%;
 }
 
-/* line 31, ../scss/base-settings/layouts/_grid.scss */
+/* line 27, ../scss/base-settings/layouts/_grid.scss */
 
 .grid * :last-child {
   margin-bottom: 0;
 }
 
-/* line 42, ../scss/base-settings/layouts/_grid.scss */
+/* line 33, ../scss/base-settings/layouts/_grid.scss */
 
 .grid__col {
   -webkit-box-flex: 1;
@@ -986,46 +975,46 @@ select + option:focus {
   flex: 1;
 }
 
-/* line 48, ../scss/base-settings/layouts/_grid.scss */
+/* line 39, ../scss/base-settings/layouts/_grid.scss */
 
 .grid--gutter {
   padding-left: 1em;
 }
 
-/* line 50, ../scss/base-settings/layouts/_grid.scss */
+/* line 41, ../scss/base-settings/layouts/_grid.scss */
 
 .grid--gutter > .grid__col {
   margin: 0 1em 1em 0;
 }
 
-/* line 60, ../scss/base-settings/layouts/_grid.scss */
+/* line 51, ../scss/base-settings/layouts/_grid.scss */
 
 .grid--wide > .grid--gutter {
   margin-top: 1em;
 }
 
-/* line 68, ../scss/base-settings/layouts/_grid.scss */
+/* line 59, ../scss/base-settings/layouts/_grid.scss */
 
 .grid--gutter > .grid__col .grid,
 .grid--wide .grid {
   padding-top: 1em;
 }
 
-/* line 74, ../scss/base-settings/layouts/_grid.scss */
+/* line 61, ../scss/base-settings/layouts/_grid.scss */
 
 .grid--gutter > .grid__col .grid:not(.grid--gutter),
 .grid--wide .grid:not(.grid--gutter) {
   padding-top: 0;
 }
 
-/* line 90, ../scss/base-settings/layouts/_grid.scss */
+/* line 67, ../scss/base-settings/layouts/_grid.scss */
 
 ul.grid--wide {
   padding-left: 0;
 }
 
 @media only screen and (min-width: 0) and (max-width: 40em) {
-  /* line 113, ../scss/base-settings/layouts/_grid.scss */
+  /* line 90, ../scss/base-settings/layouts/_grid.scss */
 
   .g-S1 > .grid__col {
     -webkit-box-flex: 1;
@@ -1034,7 +1023,7 @@ ul.grid--wide {
     flex: 1 0 100%;
   }
 
-  /* line 114, ../scss/base-settings/layouts/_grid.scss */
+  /* line 91, ../scss/base-settings/layouts/_grid.scss */
 
   .g-S2 > .grid__col {
     -webkit-box-flex: 1;
@@ -1043,7 +1032,7 @@ ul.grid--wide {
     flex: 1 0 50%;
   }
 
-  /* line 115, ../scss/base-settings/layouts/_grid.scss */
+  /* line 92, ../scss/base-settings/layouts/_grid.scss */
 
   .g-S3 > .grid__col {
     -webkit-box-flex: 1;
@@ -1052,7 +1041,7 @@ ul.grid--wide {
     flex: 1 0 33.33333%;
   }
 
-  /* line 118, ../scss/base-settings/layouts/_grid.scss */
+  /* line 95, ../scss/base-settings/layouts/_grid.scss */
 
   .grid--gutter.g-S1 > .grid__col {
     -webkit-box-flex: 1;
@@ -1061,7 +1050,7 @@ ul.grid--wide {
     flex: 1 0 calc(100% - 1em);
   }
 
-  /* line 119, ../scss/base-settings/layouts/_grid.scss */
+  /* line 96, ../scss/base-settings/layouts/_grid.scss */
 
   .grid--gutter.g-S2 > .grid__col {
     -webkit-box-flex: 1;
@@ -1070,7 +1059,7 @@ ul.grid--wide {
     flex: 1 0 calc(100% / 2 - 1em);
   }
 
-  /* line 120, ../scss/base-settings/layouts/_grid.scss */
+  /* line 97, ../scss/base-settings/layouts/_grid.scss */
 
   .grid--gutter.g-S3 > .grid__col {
     -webkit-box-flex: 1;
@@ -1081,7 +1070,7 @@ ul.grid--wide {
 }
 
 @media only screen and (min-width: 40em) and (max-width: 60em) {
-  /* line 126, ../scss/base-settings/layouts/_grid.scss */
+  /* line 103, ../scss/base-settings/layouts/_grid.scss */
 
   .g-M2 > .grid__col {
     -webkit-box-flex: 1;
@@ -1090,7 +1079,7 @@ ul.grid--wide {
     flex: 1 0 50%;
   }
 
-  /* line 127, ../scss/base-settings/layouts/_grid.scss */
+  /* line 104, ../scss/base-settings/layouts/_grid.scss */
 
   .g-M3 > .grid__col {
     -webkit-box-flex: 1;
@@ -1099,7 +1088,7 @@ ul.grid--wide {
     flex: 1 0 33.33333%;
   }
 
-  /* line 128, ../scss/base-settings/layouts/_grid.scss */
+  /* line 105, ../scss/base-settings/layouts/_grid.scss */
 
   .g-M4 > .grid__col {
     -webkit-box-flex: 1;
@@ -1108,7 +1097,7 @@ ul.grid--wide {
     flex: 1 0 25%;
   }
 
-  /* line 131, ../scss/base-settings/layouts/_grid.scss */
+  /* line 108, ../scss/base-settings/layouts/_grid.scss */
 
   .grid--gutter.g-M2 > .grid__col {
     -webkit-box-flex: 1;
@@ -1117,7 +1106,7 @@ ul.grid--wide {
     flex: 1 0 calc(100% / 2 - 1em);
   }
 
-  /* line 132, ../scss/base-settings/layouts/_grid.scss */
+  /* line 109, ../scss/base-settings/layouts/_grid.scss */
 
   .grid--gutter.g-M3 > .grid__col {
     -webkit-box-flex: 1;
@@ -1126,7 +1115,7 @@ ul.grid--wide {
     flex: 1 0 calc(100% / 3 - 1em);
   }
 
-  /* line 133, ../scss/base-settings/layouts/_grid.scss */
+  /* line 110, ../scss/base-settings/layouts/_grid.scss */
 
   .grid--gutter.g-M4 > .grid__col {
     -webkit-box-flex: 1;
@@ -1137,7 +1126,7 @@ ul.grid--wide {
 }
 
 @media only screen and (min-width: 80em) {
-  /* line 141, ../scss/base-settings/layouts/_grid.scss */
+  /* line 118, ../scss/base-settings/layouts/_grid.scss */
 
   .g-L2 > .grid__col {
     -webkit-box-flex: 1;
@@ -1146,7 +1135,7 @@ ul.grid--wide {
     flex: 1 0 50%;
   }
 
-  /* line 142, ../scss/base-settings/layouts/_grid.scss */
+  /* line 119, ../scss/base-settings/layouts/_grid.scss */
 
   .g-L3 > .grid__col {
     -webkit-box-flex: 1;
@@ -1155,7 +1144,7 @@ ul.grid--wide {
     flex: 1 0 33.33333%;
   }
 
-  /* line 143, ../scss/base-settings/layouts/_grid.scss */
+  /* line 120, ../scss/base-settings/layouts/_grid.scss */
 
   .g-L4 > .grid__col {
     -webkit-box-flex: 1;
@@ -1164,7 +1153,7 @@ ul.grid--wide {
     flex: 1 0 25%;
   }
 
-  /* line 144, ../scss/base-settings/layouts/_grid.scss */
+  /* line 121, ../scss/base-settings/layouts/_grid.scss */
 
   .g-L6 > .grid__col {
     -webkit-box-flex: 1;
@@ -1173,7 +1162,7 @@ ul.grid--wide {
     flex: 1 0 16.66667%;
   }
 
-  /* line 147, ../scss/base-settings/layouts/_grid.scss */
+  /* line 124, ../scss/base-settings/layouts/_grid.scss */
 
   .grid--gutter.g-L2 > .grid__col {
     -webkit-box-flex: 1;
@@ -1182,7 +1171,7 @@ ul.grid--wide {
     flex: 1 0 calc(100% / 2 - 1em);
   }
 
-  /* line 148, ../scss/base-settings/layouts/_grid.scss */
+  /* line 125, ../scss/base-settings/layouts/_grid.scss */
 
   .grid--gutter.g-L3 > .grid__col {
     -webkit-box-flex: 1;
@@ -1191,7 +1180,7 @@ ul.grid--wide {
     flex: 1 0 calc(100% / 3 - 1em);
   }
 
-  /* line 149, ../scss/base-settings/layouts/_grid.scss */
+  /* line 126, ../scss/base-settings/layouts/_grid.scss */
 
   .grid--gutter.g-L4 > .grid__col {
     -webkit-box-flex: 1;
@@ -1200,7 +1189,7 @@ ul.grid--wide {
     flex: 1 0 calc(100% / 4 - 1em);
   }
 
-  /* line 150, ../scss/base-settings/layouts/_grid.scss */
+  /* line 127, ../scss/base-settings/layouts/_grid.scss */
 
   .grid--gutter.g-L6 > .grid__col {
     -webkit-box-flex: 1;
@@ -1211,7 +1200,7 @@ ul.grid--wide {
 }
 
 @media only screen and (min-width: 40em) {
-  /* line 157, ../scss/base-settings/layouts/_grid.scss */
+  /* line 134, ../scss/base-settings/layouts/_grid.scss */
 
   .grid__col--1of2 {
     -webkit-box-flex: 1;
@@ -1220,7 +1209,7 @@ ul.grid--wide {
     flex: 1 0 50%;
   }
 
-  /* line 158, ../scss/base-settings/layouts/_grid.scss */
+  /* line 135, ../scss/base-settings/layouts/_grid.scss */
 
   .grid__col--1of3 {
     -webkit-box-flex: 1;
@@ -1229,7 +1218,7 @@ ul.grid--wide {
     flex: 1 0 33.33333%;
   }
 
-  /* line 159, ../scss/base-settings/layouts/_grid.scss */
+  /* line 136, ../scss/base-settings/layouts/_grid.scss */
 
   .grid__col--1of4 {
     -webkit-box-flex: 1;
@@ -1238,7 +1227,7 @@ ul.grid--wide {
     flex: 1 0 25%;
   }
 
-  /* line 162, ../scss/base-settings/layouts/_grid.scss */
+  /* line 139, ../scss/base-settings/layouts/_grid.scss */
 
   .grid--gutter .grid__col--1of2 {
     -webkit-box-flex: 1;
@@ -1247,7 +1236,7 @@ ul.grid--wide {
     flex: 1 0 calc(100% / 2 - 1em);
   }
 
-  /* line 163, ../scss/base-settings/layouts/_grid.scss */
+  /* line 140, ../scss/base-settings/layouts/_grid.scss */
 
   .grid--gutter .grid__col--1of3 {
     -webkit-box-flex: 1;
@@ -1256,7 +1245,7 @@ ul.grid--wide {
     flex: 1 0 calc(100% / 3 - 1em);
   }
 
-  /* line 164, ../scss/base-settings/layouts/_grid.scss */
+  /* line 141, ../scss/base-settings/layouts/_grid.scss */
 
   .grid--gutter .grid__col--1of4 {
     -webkit-box-flex: 1;

@@ -1,19 +1,11 @@
 // Grid
 
-// As there is a max-width delcared for the restricted site width
-// we use margin to center .grid as we don't want a main flex wrapper for centering.
-// We do this so that we can have resticted and full width grids anywhwere on the page
-// without the need of hacks to make the full width one.
-
 // Variables grid specific
 $grid-gutter: 1em;
 
-// add the flex. We want it to be on the cols as well as the container so done this way.
-[class^="grid"] {
-  @extend %flex; // This extend is in the _flexbox.scss file
-}
-
-// Done this way so it can be prefixed with anything for other modular classes
+// This lives here as primarly it's the grid restricted width - grid class: grid--maxWidth
+// but it can be prefixed with anything for other modular classes (i.e intro-header-maxWidth)
+// to replicate the single col with a grid gutter.
 [class*="-maxWidth"] {
   max-width: $site-width;
   margin: 0 auto 0; // we declare the bottom as zero here to cater for when .grid is on a ul
@@ -23,19 +15,18 @@ $grid-gutter: 1em;
   }
 }
 
+// add the flex. We want it to be on the cols as well as the container so done this way.
+[class^="grid"] {
+  @extend %flex; // This extend is in the _flexbox.scss file
+}
+
 // the main grid settings
 .grid {
   list-style: none; // for when a list is a grid
   width: $full-width;
-
-  * :last-child { // ********** original
+  * :last-child {
     margin-bottom: 0;
   }
-
-  // * :last-child &:not(.grid__col) { // ********** extra for the nested collapse thing
-  //   margin-bottom: 0;
-  // }
-
 }
 
 // set the columns
@@ -66,24 +57,10 @@ $grid-gutter: 1em;
 }
 
 %nested-grid {
-
-  padding-top: $grid-gutter; // ********** original
-
-  // padding-left: 0; // ********** extra for the nested collapse thing
-
+  padding-top: $grid-gutter;
   &:not(.grid--gutter) {
     padding-top: 0;
   }
-
-
-  // .grid__col { // ********** extra for the nested collapse thing
-  //   margin-bottom: 0;
-  //   &:last-of-type {
-  //     margin-right: 0;
-  //   }
-  // }
-
-
 }
 
 // clear the list default when a wide grid is used
