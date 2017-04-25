@@ -150,24 +150,24 @@
       <section class="site-maxWidth">
         <h3>Forms</h3>
         <p>All fields marked with an <abbr title="Required">*</abbr> are required.</p>
-        <form>
+        <form method="post" action="your-form-script-here.php" role="form">
           <fieldset>
             <div class="form-item">
-              <label>Name <abbr title="Required">*</abbr></label>
-              <input type="text" placeholder="Enter name" />
+              <label for="Name">Name <abbr title="Required">*</abbr></label>
+              <input id="Name" type="text" placeholder="Enter name" pattern="[a-zA-Z\s]+" aria-required="true" required />
             </div>
             <div class="form-item">
-              <label>Email address <abbr title="Required">*</abbr></label>
-              <input type="email" placeholder="name@example.com" />
+              <label for="Email">Email address <abbr title="Required">*</abbr></label>
+              <input id="Email" type="email" placeholder="name@example.com" required />
             </div>
             <div class="form-item">
-              <label>URL</label>
-              <input type="url" placeholder="www.example.com" />
+              <label for="URL">URL</label>
+              <input id="URL" type="url" placeholder="www.example.com" />
             </div>
           <!-- options -->
             <div class="form-item">
-              <label>Select</label>
-              <select>
+              <label for="option">Select</label>
+              <select id="option">
                 <option value="option 1">option 1</option>
                 <option value="option 2">option 2</option>
                 <option value="option 3">option 3</option>
@@ -191,11 +191,11 @@
               <label for="checkbox2">Checkbox 2</label>
             </div>
             <div class="form-item">
-              <label>Message</label>
-              <textarea placeholder="Type your message here"></textarea>
+              <label for="Message">Message</label>
+              <textarea id="Message" placeholder="Type your message here"></textarea>
             </div>
           </fieldset>
-          <button class="button btn-green">Submit</button>
+          <button type="submit" class="button button--green">Submit</button>
         </form>
       </section>
     <!-- buttons -->
