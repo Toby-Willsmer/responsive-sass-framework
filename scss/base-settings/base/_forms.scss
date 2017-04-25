@@ -15,9 +15,9 @@ fieldset {
 }
 
 label {
-  @include font-rhythm(14, 3, 1);
+  @include font-rhythm(15, 6, 1);
   color: $grey-darker;
-  display: $block;
+  display: block;
   font-weight: bold;
   abbr {
     color: $red-dark;
@@ -52,7 +52,7 @@ input[type="checkbox"],
 input[type="radio"],
 input[type="checkbox"] + label,
 input[type="radio"] + label {
-  display: $in-block;
+  display: inline-block;
   &:hover {
     cursor: pointer;
   }

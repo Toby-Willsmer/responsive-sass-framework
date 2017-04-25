@@ -5,10 +5,6 @@ $full-width:       $hundred;
 $full-height:      $hundred;
 $site-width:       1300px; // the default width for the site used in layouts/_grid.scss
 
-// directions
-$left:             left;
-$right:            right;
-
 // Timings - mostly used in trasitions
 $ease: ease;
 
@@ -25,10 +21,6 @@ $lrg-max-height:   750px;
 $xlrg-max-height:  1000px;
 $xxlrg-max-height: 1500px;
 $huge-max-height:  9999px; // if you need to use this or bigger maybe rethink the UI for the content
-
-// blocks
-$in-block:         inline-block;
-$block:            block;
 
 // spacing
 $space-xxsml:      calc-rem( 3 );

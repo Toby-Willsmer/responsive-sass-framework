@@ -1,7 +1,7 @@
 // Buttons - these are the base setting for buttons any variations are in the /modules dir
 
 .button {
-  display: $in-block;
+  display: inline-block;
   width: $full-width;
   padding: $space-sml $space-med;
   border: 1px solid transparent;
