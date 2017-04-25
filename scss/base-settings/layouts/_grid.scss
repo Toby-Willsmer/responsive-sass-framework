@@ -24,9 +24,6 @@ $grid-gutter: 1em;
 .grid {
   list-style: none; // for when a list is a grid
   width: $full-width;
-  * :last-child {
-    margin-bottom: 0;
-  }
 }
 
 // set the columns
@@ -131,13 +128,13 @@ $w-12:  calc(#{$hundred} / 12 - #{$grid-gutter});
 // For the individual sizes
 // we only do thirds, quarters and halves as they are the most common sizes used
 @include respond-to($small) {
-  .grid__col--1of2 { flex: 1 0 $hundred/2; }
-  .grid__col--1of3 { flex: 1 0 $hundred/3; }
-  .grid__col--1of4 { flex: 1 0 $hundred/4; }
+  .grid__col--1of2 { flex: 0 0 $hundred/2; }
+  .grid__col--1of3 { flex: 0 0 $hundred/3; }
+  .grid__col--1of4 { flex: 0 0 $hundred/4; }
 
   .grid--gutter {
-    .grid__col--1of2 { flex: 1 0 $w-2; }
-    .grid__col--1of3 { flex: 1 0 $w-3; }
-    .grid__col--1of4 { flex: 1 0 $w-4; }
+    .grid__col--1of2 { flex: 0 0 $w-2; }
+    .grid__col--1of3 { flex: 0 0 $w-3; }
+    .grid__col--1of4 { flex: 0 0 $w-4; }
   }
 }
