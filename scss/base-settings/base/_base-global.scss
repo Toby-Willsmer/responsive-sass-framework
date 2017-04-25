@@ -5,14 +5,14 @@
 *:after { box-sizing: border-box; }
 
 html {
-  height: 100%; // Prevent iOS text size adjust after orientation change, without disabling user zoom.
+  height: $full-height; // Prevent iOS text size adjust after orientation change, without disabling user zoom.
   font-size: 16px; // same as above
   font-family: sans-serif;
   line-height: 1.5;
 }
 
 body {
-  background: #fff;
+  background: white;
   color: #333;
   position: relative;
   margin: 0; 
@@ -21,12 +21,12 @@ body {
 }
 
 main,
-footer { padding-top: 24px; }
+footer { padding-top: $space-lrg; }
 
 // get images and embeds to work properly
 img,
 object,
-embed { max-width: 100%; }
+embed { max-width: $full-width; }
 
 img {
   -ms-interpolation-mode: bicubic;
@@ -36,17 +36,13 @@ img {
 
 // conditional IE message
 .not-supported {
-  width: 100%;
-  padding: 20px;
-  color: #000;
+  width: $full-width;
+  padding: calc-rem(20);
+  color: black;
   text-align: center;
   background: #ffecb3;
   border-bottom: solid 1px #664d00;
   p {
     margin-bottom: 0;
   }
-}
-
-.clearfix {
-  @include clearfix;
 }
