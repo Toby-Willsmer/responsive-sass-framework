@@ -11,11 +11,23 @@
   & *:not(.grid--gutter) { // this is specifically for IE10 not doing the wrapping of content
     max-width: $full-width;
   }
+  * :last-child {
+    margin-bottom: 0;
+  }
 }
 
 // Flex classes
 .flex {
   @extend %flex;
+}
+
+// Spacing - use these on the parent container
+.align-spaceBetween {
+  justify-content: space-between;
+}
+
+.align-spaceAround {
+  justify-content: space-around;
 }
 
 // Alignments
